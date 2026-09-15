@@ -1,7 +1,38 @@
 // Root Domain Access — Interactive Terminal & UI Engine
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. FAQ Accordion Handling
+  // 1. Mobile Navigation Menu
+  const nav = document.querySelector('nav');
+  const navLinks = document.querySelector('.nav-links');
+  if (nav && navLinks) {
+    const mobileBtn = document.createElement('button');
+    mobileBtn.className = 'mobile-menu-btn';
+    mobileBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    mobileBtn.setAttribute('aria-label', 'Toggle Navigation');
+    
+    // Insert before the enroll button if it exists, otherwise append
+    const enrollBtn = document.querySelector('.btn-enroll-nav');
+    if (enrollBtn) {
+      nav.insertBefore(mobileBtn, enrollBtn);
+    } else {
+      nav.appendChild(mobileBtn);
+    }
+
+    mobileBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-open');
+      mobileBtn.innerHTML = navLinks.classList.contains('nav-open') ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+    });
+
+    // Close on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('nav-open');
+        mobileBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      });
+    });
+  }
+
+  // 2. FAQ Accordion Handling
   document.querySelectorAll('.faq-q').forEach(q => {
     q.addEventListener('click', () => {
       const item = q.closest('.faq-item');
