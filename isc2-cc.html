@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ISC2 CC (Certified in Cybersecurity) Blueprint | Root Domain Access</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html" class="brand">
+      <div class="logo-box"><i class="fa-solid fa-terminal"></i></div>
+      <div class="brand-text">ROOT <span>DOMAIN</span> ACCESS</div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#courses">All Tracks</a>
+      <a href="#curriculum">Syllabus</a>
+      <a href="#labs">10 Labs</a>
+      <a href="#schedules">Schedules</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a href="#enroll" class="btn-enroll-nav">Enroll in Batch →</a>
+  </nav>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumb">
+    <a href="index.html">Courses</a> <span>/</span> Cybersecurity Foundations <span>/</span> ISC2 CC (Certified in Cybersecurity)
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-grid" style="display:grid;grid-template-columns:1.8fr 1.2fr;gap:40px;">
+      <div>
+        <div class="badge-tag" style="border-color:var(--green);color:var(--green);">
+          <i class="fa-solid fa-user-shield"></i> ISC2 Certified in Cybersecurity (CC)
+        </div>
+        <h1 style="font-size:clamp(32px, 4.5vw, 48px);line-height:1.15;margin:16px 0;">
+          Foundational Security Architecture &amp; Risk Governance
+        </h1>
+        <p class="hero-desc">
+          The official 5-domain ISC2 CC curriculum enriched with practical enterprise scenarios. Master the CIA triad, IAAA, qualitative/quantitative risk calculations (SLE, ARO, ALE), business continuity &amp; disaster recovery site tiers, access control models (DAC/MAC/RBAC/ABAC), and SOC operations.
+        </p>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar" style="display:grid;grid-template-columns:repeat(4, 1fr);gap:16px;background:var(--bg-surface);border:1px solid var(--card-border);border-radius:10px;padding:18px 22px;">
+          <div class="stat-item">
+            <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">Duration</div>
+            <div style="font-size:18px;font-weight:700;color:var(--white);">30 <span style="color:var(--green);font-size:14px;">Hrs</span></div>
+          </div>
+          <div class="stat-item">
+            <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">Hands-on Labs</div>
+            <div style="font-size:18px;font-weight:700;color:var(--white);">10 <span style="color:var(--green);font-size:14px;">Labs</span></div>
+          </div>
+          <div class="stat-item">
+            <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">Certification</div>
+            <div style="font-size:18px;font-weight:700;color:var(--white);">ISC2 CC</div>
+          </div>
+          <div class="stat-item">
+            <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">Format</div>
+            <div style="font-size:18px;font-weight:700;color:var(--white);">Live <span style="color:var(--green);font-size:14px;">Interactive</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Enrollment Card -->
+      <div class="terminal-window" id="enroll">
+        <div class="titlebar">
+          <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+          <div class="titlebar-file">isc2_cc.sh</div>
+        </div>
+        <div style="padding:24px;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:16px;border-bottom:1px solid var(--card-border);margin-bottom:18px;">
+            <div>
+              <div style="font-size:12px;color:var(--gray-dim);text-transform:uppercase;">Course Fee</div>
+              <div style="font-size:30px;font-weight:700;color:var(--green);font-family:'Space Grotesk',sans-serif;">₹6,000 <span style="font-size:13px;color:var(--gray);font-weight:400;">/ One-Time</span></div>
+            </div>
+            <div style="font-size:11px;color:var(--gray-dim);text-align:right;">
+              <div>Includes 500+ Practice Exam Questions</div>
+            </div>
+          </div>
+
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:24px;">
+            <li style="font-size:13px;color:var(--gray);display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-check" style="color:var(--cyan);"></i> 30 Hours Complete 5-Domain Coverage</li>
+            <li style="font-size:13px;color:var(--gray);display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-check" style="color:var(--cyan);"></i> Mechanism-Level Risk &amp; Governance Formulas</li>
+            <li style="font-size:13px;color:var(--gray);display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-check" style="color:var(--cyan);"></i> Stepping Stone Toward CCSP &amp; CISSP Credentials</li>
+            <li style="font-size:13px;color:var(--gray);display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-check" style="color:var(--cyan);"></i> Real-world Incident Response Playbook Drills</li>
+            <li style="font-size:13px;color:var(--gray);display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-check" style="color:var(--cyan);"></i> ISC2 Code of Ethics &amp; Exam Strategy Guidance</li>
+          </ul>
+
+          <a href="https://wa.me/918451971503?text=Hi%20Samved,%20I%20want%20to%20enroll%20in%20ISC2%20CC." target="_blank" class="btn-primary" style="display:block;width:100%;text-align:center;padding:14px;">
+            <i class="fa-brands fa-whatsapp"></i> Reserve Seat in Next Batch
+          </a>
+          <div style="text-align:center;font-size:11px;color:var(--gray-dim);margin-top:10px;">
+            Direct phone/WhatsApp: +91 8451971503 · Mumbai / Online
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complete Syllabus -->
+  <section class="section-pad" id="curriculum">
+    <div class="sec-kicker"><i class="fa-solid fa-terminal"></i> $ cat isc2_cc_domains.json</div>
+    <h2 class="sec-title">Curriculum Blueprint (5 Official Domains)</h2>
+    <p class="sec-subtitle">Complete breakdown of all 5 domains required for the ISC2 CC examination.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:24px;">
+      <!-- Domain 1 -->
+      <div style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:24px;">
+        <div style="font-size:11px;color:var(--cyan);font-weight:600;letter-spacing:1px;text-transform:uppercase;">Domain 1 · 26% of Exam</div>
+        <h3 style="font-size:18px;margin:6px 0 12px;">Security Principles</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--gray);">
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> CIA Triad (Confidentiality, Integrity, Availability) and IAAA (Identification, Authentication, Authorization, Accountability)</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Risk Management: Threat vs Vulnerability vs Risk, Risk formulas (`Risk = Threat x Vulnerability x Asset Value`)</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Quantitative calculations: Asset Value (AV), Exposure Factor (EF), Single Loss Expectancy (`SLE = AV x EF`), Annualized Rate of Occurrence (ARO), Annualized Loss Expectancy (`ALE = SLE x ARO`)</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Risk Treatment: Acceptance, Avoidance, Mitigation, Transfer (Insurance)</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Regulatory frameworks &amp; privacy laws: GDPR, HIPAA, PCI-DSS, NIST Cybersecurity Framework</li>
+        </ul>
+      </div>
+
+      <!-- Domain 2 -->
+      <div style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:24px;">
+        <div style="font-size:11px;color:var(--cyan);font-weight:600;letter-spacing:1px;text-transform:uppercase;">Domain 2 · 10% of Exam</div>
+        <h3 style="font-size:18px;margin:6px 0 12px;">Business Continuity (BC), DR &amp; IR</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--gray);">
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Business Impact Analysis (BIA), Maximum Tolerable Downtime (MTD), RTO &amp; RPO metrics</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Backup strategies: Full, Differential (cumulative), and Incremental (non-cumulative)</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Alternate site tiers: Redundant/Mirror Site, Hot Site, Warm Site, Cold Site, Mobile Site</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Incident Response Phases (NIST SP 800-61): Preparation, Detection &amp; Analysis, Containment/Eradication/Recovery, Post-Incident Activity</li>
+        </ul>
+      </div>
+
+      <!-- Domain 3 -->
+      <div style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:24px;">
+        <div style="font-size:11px;color:var(--cyan);font-weight:600;letter-spacing:1px;text-transform:uppercase;">Domain 3 · 22% of Exam</div>
+        <h3 style="font-size:18px;margin:6px 0 12px;">Access Controls Concepts</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--gray);">
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Physical vs Technical (Logical) vs Administrative Controls</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Access Control Models: Discretionary (DAC), Mandatory (MAC / Security labels), Role-Based (RBAC), Attribute-Based (ABAC)</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Multi-Factor Authentication (MFA) factors: Something you know, have, are, somewhere you are, something you do</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Privileged Access Management (PAM), Separation of Duties (SoD) &amp; Principle of Least Privilege</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> SSO &amp; Federation protocols: SAML 2.0, OpenID Connect, OAuth 2.0, Kerberos</li>
+        </ul>
+      </div>
+
+      <!-- Domain 4 & 5 -->
+      <div style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:24px;">
+        <div style="font-size:11px;color:var(--cyan);font-weight:600;letter-spacing:1px;text-transform:uppercase;">Domain 4 &amp; 5 · 42% of Exam</div>
+        <h3 style="font-size:18px;margin:6px 0 12px;">Network Security &amp; Security Operations</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--gray);">
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> OSI &amp; TCP/IP Models, port numbers, protocols (DNS, DHCP, HTTP/HTTPS, SSH, TLS)</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Network defense: Firewalls, IDS/IPS, DMZ, Network Segmentation, Zero Trust Architecture</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Common network threats: MITM, DDoS, ARP Spoofing, DNS poisoning, Phishing, Ransomware</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Data security lifecycle: Create, Store, Use, Share, Archive, Destroy</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Security Operations: Patch management, Endpoint protection (EDR), Log management (SIEM), Change management</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 Hands-on Labs -->
+  <section class="section-pad" id="labs">
+    <div class="sec-kicker"><i class="fa-solid fa-microchip"></i> $ sudo cc-labs --verify</div>
+    <h2 class="sec-title">10 Practical Security &amp; Governance Labs</h2>
+    <p class="sec-subtitle">Hands-on exercises bridging theoretical cybersecurity concepts with real-world enterprise operations.</p>
+
+    <div style="background:var(--bg-surface);border:1px solid var(--card-border);border-radius:12px;padding:28px;">
+      <div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:14px;">
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 01</b> · Quantitative Risk Assessment Worksheet &amp; SLE/ALE Modeling</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 02</b> · Threat Modeling with STRIDE Matrix on Cloud Topologies</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 03</b> · Business Impact Analysis (BIA) &amp; RTO/RPO Calculation Simulation</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 04</b> · Full vs Differential vs Incremental Backup Recovery Drills</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 05</b> · Role-Based Access Control (RBAC) Matrix Design in Enterprise Systems</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 06</b> · Multi-Factor Authentication (FIDO2 / Authenticator) Enrollment Flow</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 07</b> · Wireshark Packet Inspection of Unencrypted vs Encrypted Traffic</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 08</b> · Zero Trust Policy Design: Network Segmentation &amp; Posture Verification</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 09</b> · Live Incident Response Playbook Drill: Ransomware Containment</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 10</b> · ISC2 CC Official Style 100-Question Timed Mock Exam</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <div class="cta-banner">
+    <h2>Get ISC2 Certified &amp; Build Your Security Foundation</h2>
+    <p>Join the next live batch at Root Domain Access. Proven exam guidance with zero guesswork.</p>
+    <a href="https://wa.me/918451971503?text=Hi%20Samved,%20I%20am%20ready%20to%20enroll%20in%20ISC2%20CC." target="_blank" class="btn-primary" style="padding:16px 36px;font-size:16px;">
+      <i class="fa-brands fa-whatsapp"></i> Enroll Now via WhatsApp / Call
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="brand-text" style="font-size:16px;">ROOT <span>DOMAIN</span> ACCESS</div>
+        <p>Enterprise IT &amp; Cybersecurity Training Academy. Taught through real home-lab infrastructure and production mechanisms.</p>
+        <div style="margin-top:12px;color:var(--gray);font-size:13px;">
+          Direct: <b>+91 8451971503</b> · <b>samvedme@zohomail.com</b>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h5>Courses</h5>
+          <a href="ccna.html">CCNA (200-301)</a>
+          <a href="rhcsa-rhce.html">RHCSA / RHCE</a>
+          <a href="aws-solutions-architect.html">AWS Solutions Architect</a>
+          <a href="firewall-security.html">Firewall &amp; Security</a>
+          <a href="isc2-cc.html">ISC2 CC</a>
+        </div>
+        <div>
+          <h5>Navigation</h5>
+          <a href="index.html">Home</a>
+          <a href="#curriculum">Syllabus</a>
+          <a href="#labs">10 Labs</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:30px;text-align:center;font-size:11px;color:var(--gray-dim);border-top:1px solid rgba(255,255,255,0.03);padding-top:20px;">
+      © 2026 Root Domain Access. All rights reserved. ISC2® is a registered trademark of (ISC)², Inc.
+    </div>
+  </footer>
+
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

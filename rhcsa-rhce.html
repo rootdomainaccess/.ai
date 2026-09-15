@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RHCSA & RHCE (RHEL 9) Blueprint | Root Domain Access</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html" class="brand">
+      <div class="logo-box"><i class="fa-solid fa-terminal"></i></div>
+      <div class="brand-text">ROOT <span>DOMAIN</span> ACCESS</div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#courses">All Tracks</a>
+      <a href="#curriculum">Syllabus</a>
+      <a href="#labs">24 Labs</a>
+      <a href="#schedules">Schedules</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a href="#enroll" class="btn-enroll-nav">Enroll in Batch →</a>
+  </nav>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumb">
+    <a href="index.html">Courses</a> <span>/</span> Linux Systems Engineering <span>/</span> RHCSA &amp; RHCE (RHEL 9)
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-grid" style="display:grid;grid-template-columns:1.8fr 1.2fr;gap:40px;">
+      <div>
+        <div class="badge-tag">
+          <i class="fa-brands fa-redhat"></i> Red Hat Enterprise Linux 9 (EX200 &amp; EX294)
+        </div>
+        <h1 style="font-size:clamp(32px, 4.5vw, 48px);line-height:1.15;margin:16px 0;">
+          Production Linux Engineering &amp; Ansible Automation
+        </h1>
+        <p class="hero-desc">
+          An intensive 80-hour hands-on Linux administration track. Master terminal operations, storage management (LVM, Stratis, VDO), systemd services, SELinux policy enforcement, network hardening, and enterprise infrastructure automation with Ansible.
+        </p>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar" style="display:grid;grid-template-columns:repeat(4, 1fr);gap:16px;background:var(--bg-surface);border:1px solid var(--card-border);border-radius:10px;padding:18px 22px;">
+          <div class="stat-item">
+            <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">Duration</div>
+            <div style="font-size:18px;font-weight:700;color:var(--white);">80 <span style="color:var(--green);font-size:14px;">Hrs</span></div>
+          </div>
+          <div class="stat-item">
+            <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">Hands-on Labs</div>
+            <div style="font-size:18px;font-weight:700;color:var(--white);">24 <span style="color:var(--green);font-size:14px;">Labs</span></div>
+          </div>
+          <div class="stat-item">
+            <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">OS Base</div>
+            <div style="font-size:18px;font-weight:700;color:var(--white);">RHEL 9</div>
+          </div>
+          <div class="stat-item">
+            <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">Format</div>
+            <div style="font-size:18px;font-weight:700;color:var(--white);">Live <span style="color:var(--green);font-size:14px;">1-on-1 / Batch</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Enrollment Card -->
+      <div class="terminal-window" id="enroll">
+        <div class="titlebar">
+          <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+          <div class="titlebar-file">rhel9_enrollment.sh</div>
+        </div>
+        <div style="padding:24px;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:16px;border-bottom:1px solid var(--card-border);margin-bottom:18px;">
+            <div>
+              <div style="font-size:12px;color:var(--gray-dim);text-transform:uppercase;">Complete Track Fee</div>
+              <div style="font-size:30px;font-weight:700;color:var(--green);font-family:'Space Grotesk',sans-serif;">₹14,000 <span style="font-size:13px;color:var(--gray);font-weight:400;">/ One-Time</span></div>
+            </div>
+            <div style="font-size:11px;color:var(--gray-dim);text-align:right;">
+              <div>RHCSA: ₹9,500</div>
+              <div>+ RHCE: ₹5,500</div>
+            </div>
+          </div>
+
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:24px;">
+            <li style="font-size:13px;color:var(--gray);display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-check" style="color:var(--cyan);"></i> 80 Hours Live Instructor-Led Training</li>
+            <li style="font-size:13px;color:var(--gray);display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-check" style="color:var(--cyan);"></i> Dedicated RHEL 9 VM Cluster Access</li>
+            <li style="font-size:13px;color:var(--gray);display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-check" style="color:var(--cyan);"></i> Real-world Storage (LVM, Stratis, VDO)</li>
+            <li style="font-size:13px;color:var(--gray);display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-check" style="color:var(--cyan);"></i> SELinux Troubleshooting &amp; Contexts</li>
+            <li style="font-size:13px;color:var(--gray);display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-check" style="color:var(--cyan);"></i> Ansible Playbook Automation &amp; Roles</li>
+            <li style="font-size:13px;color:var(--gray);display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-check" style="color:var(--cyan);"></i> RHCSA EX200 Speed-Run Mock Exams</li>
+          </ul>
+
+          <a href="https://wa.me/918451971503?text=Hi%20Samved,%20I%20want%20to%20enroll%20in%20RHCSA/RHCE%20at%20Root%20Domain%20Access." target="_blank" class="btn-primary" style="display:block;width:100%;text-align:center;padding:14px;">
+            <i class="fa-brands fa-whatsapp"></i> Reserve Seat in Next Batch
+          </a>
+          <div style="text-align:center;font-size:11px;color:var(--gray-dim);margin-top:10px;">
+            Direct phone/WhatsApp: +91 8451971503 · Mumbai / Online
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complete Syllabus -->
+  <section class="section-pad" id="curriculum">
+    <div class="sec-kicker"><i class="fa-solid fa-terminal"></i> $ cat rhel9_curriculum.json</div>
+    <h2 class="sec-title">Curriculum Blueprint (RHCSA EX200 &amp; RHCE EX294)</h2>
+    <p class="sec-subtitle">Structured for engineers who need to manage production enterprise fleets, not just pass a multiple-choice quiz.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:24px;">
+      <!-- Module 1 -->
+      <div style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:24px;">
+        <div style="font-size:11px;color:var(--cyan);font-weight:600;letter-spacing:1px;text-transform:uppercase;">Module 1 · Core Systems</div>
+        <h3 style="font-size:18px;margin:6px 0 12px;">Essential Tools &amp; User Security</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--gray);">
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Shell manipulation: pipes, redirection, grep/sed/awk basics, vim efficiency</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> User &amp; group management, password aging (`chage`), sudoers configuration</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> POSIX permissions, SUID, SGID, Sticky Bit &amp; Access Control Lists (`getfacl`/`setfacl`)</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> SSH key generation, config files, disabling password auth &amp; bastion configurations</li>
+        </ul>
+      </div>
+
+      <!-- Module 2 -->
+      <div style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:24px;">
+        <div style="font-size:11px;color:var(--cyan);font-weight:600;letter-spacing:1px;text-transform:uppercase;">Module 2 · Operation &amp; Boot</div>
+        <h3 style="font-size:18px;margin:6px 0 12px;">Operating Running Systems &amp; systemd</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--gray);">
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> GRUB2 boot process, emergency/rescue targets &amp; root password reset procedure</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> systemd unit files, targets, timer units (systemd timers vs crontab)</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Process monitoring: `top`, `ps`, `kill`, nice/renice priority tuning, system load metrics</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Journald logging persistence, rsyslog rules &amp; logrotate policies</li>
+        </ul>
+      </div>
+
+      <!-- Module 3 -->
+      <div style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:24px;">
+        <div style="font-size:11px;color:var(--cyan);font-weight:600;letter-spacing:1px;text-transform:uppercase;">Module 3 · Storage Architecture</div>
+        <h3 style="font-size:18px;margin:6px 0 12px;">LVM, Filesystems &amp; Advanced Storage</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--gray);">
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> MBR vs GPT partitioning with `fdisk`/`gdisk`/`parted`</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Logical Volume Management (LVM): PV, VG, LV creation, online resizing, snapshots</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> XFS vs Ext4 filesystems, persistent mounting with UUID in `/etc/fstab`</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Stratis storage management &amp; VDO deduplication/compression</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Network storage: NFS client mounts &amp; autofs automatic on-demand mounting</li>
+        </ul>
+      </div>
+
+      <!-- Module 4 -->
+      <div style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:24px;">
+        <div style="font-size:11px;color:var(--cyan);font-weight:600;letter-spacing:1px;text-transform:uppercase;">Module 4 · Hardening &amp; Network</div>
+        <h3 style="font-size:18px;margin:6px 0 12px;">SELinux, firewalld &amp; Networking</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--gray);">
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> NetworkManager CLI (`nmcli`), bonding, teaming &amp; static routing</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> SELinux Modes (Enforcing, Permissive, Disabled), Contexts (`semanage`, `restorecon`)</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> SELinux Booleans (`getsebool`/`setsebool -P`) &amp; audit log troubleshooting (`audit2why`)</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> `firewalld` zone configuration, rich rules, port forwarding &amp; masquerading</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Software management with DNF/YUM, custom repo creation &amp; AppStreams</li>
+        </ul>
+      </div>
+
+      <!-- Module 5 -->
+      <div style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:24px;">
+        <div style="font-size:11px;color:var(--cyan);font-weight:600;letter-spacing:1px;text-transform:uppercase;">Module 5 · Containers</div>
+        <h3 style="font-size:18px;margin:6px 0 12px;">Podman &amp; Rootless Containers</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--gray);">
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Podman vs Docker architecture (daemonless, rootless containers)</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Containerfile creation, building container images, registry authentication</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Persistent volume mounts, SELinux container labels (`:Z`, `:z`)</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Generating systemd unit files from Podman containers (`podman generate systemd`)</li>
+        </ul>
+      </div>
+
+      <!-- Module 6 -->
+      <div style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:24px;">
+        <div style="font-size:11px;color:var(--cyan);font-weight:600;letter-spacing:1px;text-transform:uppercase;">Module 6 · Automation (RHCE)</div>
+        <h3 style="font-size:18px;margin:6px 0 12px;">Ansible Automation Engine</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--gray);">
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Ansible architecture: Control node, managed nodes, inventory files &amp; variables</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> YAML syntax, writing idempotency-verified Playbooks &amp; tasks</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Core modules: `dnf`, `systemd`, `user`, `firewalld`, `copy`, `template` (Jinja2)</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Ansible Vault for encrypting sensitive passwords &amp; tokens</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Structuring reusable Ansible Roles and Collections</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 24 Hands-on Labs -->
+  <section class="section-pad" id="labs">
+    <div class="sec-kicker"><i class="fa-solid fa-microchip"></i> $ sudo lab-ctl --rhel-cluster</div>
+    <h2 class="sec-title">24 Hands-on Production Linux Labs</h2>
+    <p class="sec-subtitle">Execute these in real RHEL 9 virtual machines hosted on our 24/7 homelab cluster.</p>
+
+    <div style="background:var(--bg-surface);border:1px solid var(--card-border);border-radius:12px;padding:28px;">
+      <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:14px;">
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 01</b> · GRUB2 Emergency Mode &amp; Root Password Reset</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 02</b> · Custom systemd Service &amp; Timer Configuration</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 03</b> · LVM Physical Volume, Volume Group &amp; LV Expansion</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 04</b> · LVM Snapshot Creation &amp; Data Rollback Testing</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 05</b> · Stratis Encrypted Storage Pool Deployment</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 06</b> · VDO Data Deduplication &amp; Compression Lab</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 07</b> · NFS v4 Secure Shared Directory &amp; autofs Mounting</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 08</b> · SELinux Web Server Custom Port &amp; Path Context Fixes</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 09</b> · `firewalld` Multi-Zone Hardening &amp; NAT Masquerade</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 10</b> · Network Bonding (Active-Backup &amp; LACP) via `nmcli`</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 11</b> · Rootless Podman Nginx &amp; MySQL Container Setup</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 12</b> · Auto-starting Podman Containers via systemd Units</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 13</b> · Chrony NTP Stratum Peer &amp; Local Clock Tuning</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 14</b> · Advanced POSIX ACLs for Collaborative Directories</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 15</b> · Local YUM/DNF Repository Mirroring &amp; Signing</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 16</b> · Kernel Parameter Tuning via `/etc/sysctl.d`</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 17</b> · Ansible Control Node Setup &amp; Inventory Host Groups</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 18</b> · Automated User Provisioning &amp; SSH Key Playbook</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 19</b> · Multi-Host Web Server &amp; PHP-FPM Automation Playbook</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 20</b> · Jinja2 Dynamic Configuration Templating for VirtualHosts</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 21</b> · Ansible Vault Encrypted Password &amp; Secret Management</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 22</b> · Building Modular Roles for Storage &amp; Firewall Deployments</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 23</b> · Automated SELinux Boolean &amp; Context Playbooks</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 24</b> · RHCSA EX200 Timed Practical Speed-Run Simulation</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <div class="cta-banner">
+    <h2>Become a Certified Linux Infrastructure Engineer</h2>
+    <p>Join the next live batch at Root Domain Access. Limited batch sizes with direct faculty mentorship.</p>
+    <a href="https://wa.me/918451971503?text=Hi%20Samved,%20I%20am%20ready%20to%20enroll%20in%20RHCSA/RHCE." target="_blank" class="btn-primary" style="padding:16px 36px;font-size:16px;">
+      <i class="fa-brands fa-whatsapp"></i> Enroll Now via WhatsApp / Call
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="brand-text" style="font-size:16px;">ROOT <span>DOMAIN</span> ACCESS</div>
+        <p>Enterprise IT &amp; Cybersecurity Training Academy. Taught through real home-lab infrastructure and production mechanisms.</p>
+        <div style="margin-top:12px;color:var(--gray);font-size:13px;">
+          Direct: <b>+91 8451971503</b> · <b>samvedme@zohomail.com</b>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h5>Courses</h5>
+          <a href="ccna.html">CCNA (200-301)</a>
+          <a href="rhcsa-rhce.html">RHCSA / RHCE</a>
+          <a href="aws-solutions-architect.html">AWS Solutions Architect</a>
+          <a href="firewall-security.html">Firewall &amp; Security</a>
+          <a href="isc2-cc.html">ISC2 CC</a>
+        </div>
+        <div>
+          <h5>Navigation</h5>
+          <a href="index.html">Home</a>
+          <a href="#curriculum">Syllabus</a>
+          <a href="#labs">24 Labs</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:30px;text-align:center;font-size:11px;color:var(--gray-dim);border-top:1px solid rgba(255,255,255,0.03);padding-top:20px;">
+      © 2026 Root Domain Access. All rights reserved. Red Hat® and RHCSA® are registered trademarks of Red Hat, Inc.
+    </div>
+  </footer>
+
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

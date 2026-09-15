@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enrollment & Contact | Root Domain Access</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html" class="brand">
+      <div class="logo-box"><i class="fa-solid fa-terminal"></i></div>
+      <div class="brand-text">ROOT <span>DOMAIN</span> ACCESS</div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#courses">Courses</a>
+      <a href="labs.html">Cloud Racks</a>
+      <a href="about.html">Philosophy</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+    <a href="contact.html" class="btn-enroll-nav">Enroll in Batch →</a>
+  </nav>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> <span>/</span> Admissions <span>/</span> Enrollment &amp; Faculty Consultation
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-grid" style="display:grid;grid-template-columns:1.8fr 1.2fr;gap:40px;">
+      <div>
+        <div class="badge-tag">
+          <i class="fa-solid fa-graduation-cap"></i> Admissions &amp; Batch Enrollment
+        </div>
+        <h1 style="font-size:clamp(32px, 4.5vw, 48px);line-height:1.15;margin:16px 0;">
+          Start Your Enterprise IT Engineering Journey
+        </h1>
+        <p class="hero-desc">
+          Ready to join a batch or have technical questions about which certification track aligns with your career target? Talk directly to the faculty. No sales counselors — only engineers.
+        </p>
+
+        <!-- Contact Methods Grid -->
+        <div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:16px;margin-top:28px;">
+          <a href="https://wa.me/918451971503?text=Hi%20Samved,%20I%20have%20a%20query%20regarding%20courses%20at%20Root%20Domain%20Access." target="_blank" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:20px;text-decoration:none;display:flex;align-items:center;gap:16px;transition:border-color .2s;">
+            <div style="font-size:28px;color:var(--green);"><i class="fa-brands fa-whatsapp"></i></div>
+            <div>
+              <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">WhatsApp Chat</div>
+              <div style="font-size:15px;font-weight:700;color:var(--white);">+91 8451971503</div>
+            </div>
+          </a>
+
+          <a href="mailto:samvedme@zohomail.com" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:20px;text-decoration:none;display:flex;align-items:center;gap:16px;transition:border-color .2s;">
+            <div style="font-size:28px;color:var(--cyan);"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">Direct Email</div>
+              <div style="font-size:14px;font-weight:700;color:var(--white);">samvedme@zohomail.com</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Enrollment Form Card -->
+      <div class="terminal-window">
+        <div class="titlebar">
+          <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+          <div class="titlebar-file">admissions_form.py</div>
+        </div>
+        <div style="padding:24px;">
+          <form onsubmit="event.preventDefault(); alert('Thank you! Redirecting to WhatsApp to confirm your batch seat with Samved.'); window.open('https://wa.me/918451971503?text=Hi%20Samved,%20I%20submitted%20the%20Root%20Domain%20Access%20enrollment%20form.', '_blank');">
+            <div style="margin-bottom:14px;">
+              <label style="display:block;font-size:12px;color:var(--gray-dim);margin-bottom:6px;text-transform:uppercase;">Full Name</label>
+              <input type="text" required placeholder="e.g. John Doe" style="width:100%;background:#07090e;border:1px solid var(--card-border);color:var(--white);padding:10px 14px;border-radius:6px;font-family:'JetBrains Mono';font-size:13px;outline:none;">
+            </div>
+
+            <div style="margin-bottom:14px;">
+              <label style="display:block;font-size:12px;color:var(--gray-dim);margin-bottom:6px;text-transform:uppercase;">WhatsApp / Phone Number</label>
+              <input type="tel" required placeholder="+91 9876543210" style="width:100%;background:#07090e;border:1px solid var(--card-border);color:var(--white);padding:10px 14px;border-radius:6px;font-family:'JetBrains Mono';font-size:13px;outline:none;">
+            </div>
+
+            <div style="margin-bottom:14px;">
+              <label style="display:block;font-size:12px;color:var(--gray-dim);margin-bottom:6px;text-transform:uppercase;">Select Course Track</label>
+              <select style="width:100%;background:#07090e;border:1px solid var(--card-border);color:var(--white);padding:10px 14px;border-radius:6px;font-family:'JetBrains Mono';font-size:13px;outline:none;">
+                <option value="CCNA (200-301)">CCNA (200-301) — 120 Hrs &amp; 32 Labs</option>
+                <option value="RHCSA / RHCE">RHCSA / RHCE (RHEL 9) — 80 Hrs &amp; 24 Labs</option>
+                <option value="AWS Solutions Architect">AWS Solutions Architect (SAA-C03) — 80 Hrs</option>
+                <option value="Firewall & Network Security">Firewall &amp; Network Security — 40 Hrs</option>
+                <option value="ISC2 CC">ISC2 Certified in Cybersecurity — 30 Hrs</option>
+                <option value="Agentic AI for Systems">Agentic AI for IT Pros — 25 Hrs</option>
+              </select>
+            </div>
+
+            <div style="margin-bottom:18px;">
+              <label style="display:block;font-size:12px;color:var(--gray-dim);margin-bottom:6px;text-transform:uppercase;">Preferred Schedule</label>
+              <select style="width:100%;background:#07090e;border:1px solid var(--card-border);color:var(--white);padding:10px 14px;border-radius:6px;font-family:'JetBrains Mono';font-size:13px;outline:none;">
+                <option value="Weekday Morning">Weekday Morning (10:00 AM – 12:00 PM)</option>
+                <option value="Weekday Evening">Weekday Evening (07:00 PM – 09:00 PM)</option>
+                <option value="Weekend Saturday/Sunday">Weekend (Sat &amp; Sun)</option>
+                <option value="1-on-1 Dedicated Mentorship">1-on-1 Dedicated Mentorship</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:13px;font-size:14px;">
+              Submit &amp; Reserve Seat →
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="brand-text" style="font-size:16px;">ROOT <span>DOMAIN</span> ACCESS</div>
+        <p>Enterprise IT &amp; Cybersecurity Training Academy. Taught through real home-lab infrastructure and production mechanisms.</p>
+        <div style="margin-top:12px;color:var(--gray);font-size:13px;">
+          Direct: <b>+91 8451971503</b> · <b>samvedme@zohomail.com</b>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h5>Courses</h5>
+          <a href="ccna.html">CCNA (200-301)</a>
+          <a href="rhcsa-rhce.html">RHCSA / RHCE</a>
+          <a href="aws-solutions-architect.html">AWS Solutions Architect</a>
+          <a href="firewall-security.html">Firewall &amp; Security</a>
+          <a href="isc2-cc.html">ISC2 CC</a>
+        </div>
+        <div>
+          <h5>Navigation</h5>
+          <a href="index.html">Home</a>
+          <a href="labs.html">Cloud Racks</a>
+          <a href="about.html">Philosophy</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agentic AI for Systems & IT Pros | Root Domain Access</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html" class="brand">
+      <div class="logo-box"><i class="fa-solid fa-terminal"></i></div>
+      <div class="brand-text">ROOT <span>DOMAIN</span> ACCESS</div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#courses">All Tracks</a>
+      <a href="#curriculum">Syllabus</a>
+      <a href="#labs">8 Labs</a>
+      <a href="#schedules">Schedules</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a href="#enroll" class="btn-enroll-nav">Enroll in Batch →</a>
+  </nav>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumb">
+    <a href="index.html">Courses</a> <span>/</span> Modern AI Operations <span>/</span> Agentic AI for Systems Engineers
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-grid" style="display:grid;grid-template-columns:1.8fr 1.2fr;gap:40px;">
+      <div>
+        <div class="badge-tag" style="border-color:var(--cyan);color:var(--cyan);">
+          <i class="fa-solid fa-robot"></i> Practical Automation with Autonomous AI Agents
+        </div>
+        <h1 style="font-size:clamp(32px, 4.5vw, 48px);line-height:1.15;margin:16px 0;">
+          Autonomous AI Agents &amp; Tool-Calling for IT Operations
+        </h1>
+        <p class="hero-desc">
+          A practical 25-hour hands-on course designed specifically for systems engineers, network administrators, and DevOps practitioners — not software developers. Learn how to deploy AI agents that execute bash commands, parse complex logs, automate infrastructure audits, and manage cloud environments.
+        </p>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar" style="display:grid;grid-template-columns:repeat(4, 1fr);gap:16px;background:var(--bg-surface);border:1px solid var(--card-border);border-radius:10px;padding:18px 22px;">
+          <div class="stat-item">
+            <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">Duration</div>
+            <div style="font-size:18px;font-weight:700;color:var(--white);">25 <span style="color:var(--green);font-size:14px;">Hrs</span></div>
+          </div>
+          <div class="stat-item">
+            <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">Hands-on Labs</div>
+            <div style="font-size:18px;font-weight:700;color:var(--white);">8 <span style="color:var(--green);font-size:14px;">Projects</span></div>
+          </div>
+          <div class="stat-item">
+            <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">Prerequisites</div>
+            <div style="font-size:18px;font-weight:700;color:var(--white);">Basic CLI</div>
+          </div>
+          <div class="stat-item">
+            <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">Format</div>
+            <div style="font-size:18px;font-weight:700;color:var(--white);">Live <span style="color:var(--green);font-size:14px;">Hands-on</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Enrollment Card -->
+      <div class="terminal-window" id="enroll">
+        <div class="titlebar">
+          <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+          <div class="titlebar-file">agentic_ops.py</div>
+        </div>
+        <div style="padding:24px;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:16px;border-bottom:1px solid var(--card-border);margin-bottom:18px;">
+            <div>
+              <div style="font-size:12px;color:var(--gray-dim);text-transform:uppercase;">Course Fee</div>
+              <div style="font-size:30px;font-weight:700;color:var(--green);font-family:'Space Grotesk',sans-serif;">₹5,500 <span style="font-size:13px;color:var(--gray);font-weight:400;">/ One-Time</span></div>
+            </div>
+            <div style="font-size:11px;color:var(--gray-dim);text-align:right;">
+              <div>Includes Local Model Runtime Lab</div>
+            </div>
+          </div>
+
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:24px;">
+            <li style="font-size:13px;color:var(--gray);display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-check" style="color:var(--cyan);"></i> 25 Hours Live Practical Agent Engineering</li>
+            <li style="font-size:13px;color:var(--gray);display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-check" style="color:var(--cyan);"></i> Deploy Local LLMs via Ollama &amp; llama.cpp on Homelabs</li>
+            <li style="font-size:13px;color:var(--gray);display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-check" style="color:var(--cyan);"></i> Build Real Tool-Calling Agents for Linux/Docker</li>
+            <li style="font-size:13px;color:var(--gray);display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-check" style="color:var(--cyan);"></i> Automated SIEM &amp; Syslog Triage Agent Pipeline</li>
+            <li style="font-size:13px;color:var(--gray);display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-check" style="color:var(--cyan);"></i> Enterprise Security Guardrails &amp; Sandboxing</li>
+          </ul>
+
+          <a href="https://wa.me/918451971503?text=Hi%20Samved,%20I%20want%20to%20enroll%20in%20Agentic%20AI%20for%20IT%20Pros." target="_blank" class="btn-primary" style="display:block;width:100%;text-align:center;padding:14px;">
+            <i class="fa-brands fa-whatsapp"></i> Reserve Seat in Next Batch
+          </a>
+          <div style="text-align:center;font-size:11px;color:var(--gray-dim);margin-top:10px;">
+            Direct phone/WhatsApp: +91 8451971503 · Mumbai / Online
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complete Syllabus -->
+  <section class="section-pad" id="curriculum">
+    <div class="sec-kicker"><i class="fa-solid fa-terminal"></i> $ cat agentic_curriculum.json</div>
+    <h2 class="sec-title">Curriculum Blueprint (4 Practical Modules)</h2>
+    <p class="sec-subtitle">Learn how to build AI infrastructure tools that save hours of manual ops work.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:24px;">
+      <!-- Module 1 -->
+      <div style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:24px;">
+        <div style="font-size:11px;color:var(--cyan);font-weight:600;letter-spacing:1px;text-transform:uppercase;">Module 1 · Foundations</div>
+        <h3 style="font-size:18px;margin:6px 0 12px;">LLMs &amp; Local Model Runtimes</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--gray);">
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> How LLMs work under the hood: Tokens, Context Windows, Temperature, and Sampling</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Running models privately on your homelab: Ollama, vLLM, and llama.cpp GGUF quantization</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Prompt Engineering for systems: System prompts, role definitions, and strict JSON output</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Model APIs: OpenAI-compatible endpoints, LiteLLM proxy router &amp; API key pooling</li>
+        </ul>
+      </div>
+
+      <!-- Module 2 -->
+      <div style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:24px;">
+        <div style="font-size:11px;color:var(--cyan);font-weight:600;letter-spacing:1px;text-transform:uppercase;">Module 2 · Agent Mechanics</div>
+        <h3 style="font-size:18px;margin:6px 0 12px;">Tool-Calling &amp; Autonomous Loops</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--gray);">
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Function/Tool Calling mechanics: JSON schema definitions, model arguments &amp; execution loops</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Building terminal execution tools safely: Sandboxing, timeout management, non-destructive execution</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Agent frameworks overview: Hermes Agent, Claude Code CLI, OpenCode, and Python custom loops</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Multi-turn state management: conversation history pruning, vector memory &amp; session persistence</li>
+        </ul>
+      </div>
+
+      <!-- Module 3 -->
+      <div style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:24px;">
+        <div style="font-size:11px;color:var(--cyan);font-weight:600;letter-spacing:1px;text-transform:uppercase;">Module 3 · Production IT Use-Cases</div>
+        <h3 style="font-size:18px;margin:6px 0 12px;">Automating Real Systems &amp; Networks</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--gray);">
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Autonomous log parsing &amp; incident triage: Wazuh SIEM alert summarizer &amp; Slack/Telegram alerts</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Automated network health-checks: pinging subnet gateways, parsing `netstat`/`ss`, generating reports</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Docker &amp; VM manager agent: auto-restarting unhealthy containers &amp; checking disk ceilings</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Automated compliance &amp; CVE scanner: querying Trivy, comparing installed packages against CVE feeds</li>
+        </ul>
+      </div>
+
+      <!-- Module 4 -->
+      <div style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:24px;">
+        <div style="font-size:11px;color:var(--cyan);font-weight:600;letter-spacing:1px;text-transform:uppercase;">Module 4 · Governance &amp; Security</div>
+        <h3 style="font-size:18px;margin:6px 0 12px;">Agent Guardrails &amp; Human-in-the-Loop</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--gray);">
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Preventing runaway agents: loop iteration caps, token limits, and rate limiters</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Guardrails &amp; PII redaction: preventing accidental leakage of enterprise credentials or user data</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Human-in-the-Loop (HITL) approval workflows for critical write operations (e.g. deleting volumes)</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Deploying agents as systemd background services and Docker containers with health checks</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 Hands-on Projects -->
+  <section class="section-pad" id="labs">
+    <div class="sec-kicker"><i class="fa-solid fa-microchip"></i> $ sudo agent-lab-runner</div>
+    <h2 class="sec-title">8 Real-World Agentic Engineering Projects</h2>
+    <p class="sec-subtitle">Build real, running agents that interact directly with your homelab infrastructure.</p>
+
+    <div style="background:var(--bg-surface);border:1px solid var(--card-border);border-radius:12px;padding:28px;">
+      <div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:14px;">
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Project 01</b> · Stand up a Private Ollama / vLLM Server on Homelab Zorin OS</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Project 02</b> · Build a Python CLI Agent with Bash &amp; File Reading Tool Capabilities</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Project 03</b> · Build an Autonomous Disk &amp; Memory Ceiling Triage Agent</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Project 04</b> · Automated Wazuh SIEM Security Log Summarizer &amp; Telegram Bot</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Project 05</b> · Network Device Topology Audit Agent via Netmiko &amp; SSH</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Project 06</b> · Cloud Cost &amp; Orphaned EBS Volume Detection Agent on AWS</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Project 07</b> · Automated Docker Container Health-Checker with Rollback Logic</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Project 08</b> · End-to-End Enterprise Operations Assistant with Human Approval Gate</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <div class="cta-banner">
+    <h2>Future-Proof Your IT Career with AI Automation</h2>
+    <p>Join the next live batch at Root Domain Access. Learn how to build production-grade autonomous tools.</p>
+    <a href="https://wa.me/918451971503?text=Hi%20Samved,%20I%20am%20ready%20to%20enroll%20in%20Agentic%20AI%20for%20IT%20Pros." target="_blank" class="btn-primary" style="padding:16px 36px;font-size:16px;">
+      <i class="fa-brands fa-whatsapp"></i> Enroll Now via WhatsApp / Call
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="brand-text" style="font-size:16px;">ROOT <span>DOMAIN</span> ACCESS</div>
+        <p>Enterprise IT &amp; Cybersecurity Training Academy. Taught through real home-lab infrastructure and production mechanisms.</p>
+        <div style="margin-top:12px;color:var(--gray);font-size:13px;">
+          Direct: <b>+91 8451971503</b> · <b>samvedme@zohomail.com</b>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h5>Courses</h5>
+          <a href="ccna.html">CCNA (200-301)</a>
+          <a href="rhcsa-rhce.html">RHCSA / RHCE</a>
+          <a href="aws-solutions-architect.html">AWS Solutions Architect</a>
+          <a href="firewall-security.html">Firewall &amp; Security</a>
+          <a href="isc2-cc.html">ISC2 CC</a>
+        </div>
+        <div>
+          <h5>Navigation</h5>
+          <a href="index.html">Home</a>
+          <a href="#curriculum">Syllabus</a>
+          <a href="#labs">8 Projects</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:30px;text-align:center;font-size:11px;color:var(--gray-dim);border-top:1px solid rgba(255,255,255,0.03);padding-top:20px;">
+      © 2026 Root Domain Access. All rights reserved.
+    </div>
+  </footer>
+
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About & Philosophy | Root Domain Access</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html" class="brand">
+      <div class="logo-box"><i class="fa-solid fa-terminal"></i></div>
+      <div class="brand-text">ROOT <span>DOMAIN</span> ACCESS</div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#courses">Courses</a>
+      <a href="labs.html">Cloud Racks</a>
+      <a href="about.html" class="active">Philosophy</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="contact.html" class="btn-enroll-nav">Enroll in Batch →</a>
+  </nav>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> <span>/</span> About Us <span>/</span> The Root Domain Access Philosophy
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-grid" style="display:grid;grid-template-columns:1.8fr 1.2fr;gap:40px;">
+      <div>
+        <div class="badge-tag">
+          <i class="fa-solid fa-terminal"></i> Built by Engineers for Engineers
+        </div>
+        <h1 style="font-size:clamp(32px, 4.5vw, 48px);line-height:1.15;margin:16px 0;">
+          No Slides. Real Packets. Production Mechanisms.
+        </h1>
+        <p class="hero-desc">
+          Most IT institutes teach you how to pass a multiple-choice quiz using 10-year-old slides. Root Domain Access was founded on a simple premise: you only truly understand networking, cloud, and security when you break it, packet-capture it in Wireshark, and fix it on real hardware.
+        </p>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar" style="display:grid;grid-template-columns:repeat(4, 1fr);gap:16px;background:var(--bg-surface);border:1px solid var(--card-border);border-radius:10px;padding:18px 22px;">
+          <div class="stat-item">
+            <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">Methodology</div>
+            <div style="font-size:18px;font-weight:700;color:var(--white);">100% <span style="color:var(--green);font-size:14px;">Hands-On</span></div>
+          </div>
+          <div class="stat-item">
+            <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">Lab Access</div>
+            <div style="font-size:18px;font-weight:700;color:var(--white);">24/7 <span style="color:var(--green);font-size:14px;">Remote</span></div>
+          </div>
+          <div class="stat-item">
+            <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">Batch Limit</div>
+            <div style="font-size:18px;font-weight:700;color:var(--white);">Max 6 <span style="color:var(--green);font-size:14px;">Seats</span></div>
+          </div>
+          <div class="stat-item">
+            <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">Mentorship</div>
+            <div style="font-size:18px;font-weight:700;color:var(--white);">1-on-1 <span style="color:var(--green);font-size:14px;">Direct</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Terminal Window -->
+      <div class="terminal-window">
+        <div class="titlebar">
+          <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+          <div class="titlebar-file">faculty_manifest.yml</div>
+        </div>
+        <div style="padding:24px;">
+          <div style="font-size:13px;color:var(--gray);line-height:1.7;">
+            <div style="color:var(--cyan);margin-bottom:8px;"># Lead Faculty &amp; Founder Profile</div>
+            <div><b style="color:var(--white);">Name:</b> Samved</div>
+            <div><b style="color:var(--white);">Current Role:</b> Network &amp; Security Engineer</div>
+            <div><b style="color:var(--white);">Enterprise Experience:</b> Catalyst Media Integrated LLP &amp; Know-All-Edge Networks</div>
+            <div><b style="color:var(--white);">Live Stack:</b> Netskope, Sophos XGS, Azure Entra ID, Scalefusion MDM, Exchange &amp; SharePoint</div>
+            <div><b style="color:var(--white);">Homelab Rig:</b> Zorin OS, Docker, ZeroTier, Wazuh SIEM, Immich, Jellyfin</div>
+            <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--card-border);color:var(--green);">
+              "I teach the exact architectures I manage daily in enterprise production."
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Pillars -->
+  <section class="section-pad">
+    <div class="sec-kicker"><i class="fa-solid fa-code-branch"></i> $ cat /etc/rootdomain/pillars.md</div>
+    <h2 class="sec-title">How Root Domain Access Is Different</h2>
+    <p class="sec-subtitle">We designed our academy to bridge the massive gap between academic training and enterprise hiring standards.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:24px;">
+      <!-- Pillar 1 -->
+      <div style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:24px;">
+        <div style="font-size:24px;color:var(--cyan);margin-bottom:12px;"><i class="fa-solid fa-network-wired"></i></div>
+        <h3 style="font-size:18px;margin-bottom:10px;">Mechanism-Level Depth</h3>
+        <p style="font-size:13.5px;color:var(--gray);line-height:1.6;">
+          We don't stop at CLI syntax. When an OSPF adjacency forms, we inspect the Hello/DBD/LSR/LSU packets in Wireshark. When an Entra ID token is issued, we decode the JWT claims and test conditional access grant conditions.
+        </p>
+      </div>
+
+      <!-- Pillar 2 -->
+      <div style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:24px;">
+        <div style="font-size:24px;color:var(--green);margin-bottom:12px;"><i class="fa-solid fa-server"></i></div>
+        <h3 style="font-size:18px;margin-bottom:10px;">The Homelab Advantage</h3>
+        <p style="font-size:13.5px;color:var(--gray);line-height:1.6;">
+          Every student learns how to stand up their own self-hosted homelab on Linux using Docker, ZeroTier VPN, and open-source infrastructure. You graduate with a living, running portfolio of services on your resume.
+        </p>
+      </div>
+
+      <!-- Pillar 3 -->
+      <div style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:24px;">
+        <div style="font-size:24px;color:var(--amber);margin-bottom:12px;"><i class="fa-solid fa-user-check"></i></div>
+        <h3 style="font-size:18px;margin-bottom:10px;">Real Interview Scenarios</h3>
+        <p style="font-size:13.5px;color:var(--gray);line-height:1.6;">
+          Technical interviewers don't ask for definitions; they give you a broken topology and say "fix it." Our mock interviews simulate high-pressure troubleshooting scenarios so you stand out in hiring loops.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <div class="cta-banner">
+    <h2>Talk Directly with the Faculty</h2>
+    <p>Get a free 15-minute roadmap consultation to map out your certification and career strategy.</p>
+    <a href="https://wa.me/918451971503?text=Hi%20Samved,%20I%20would%20like%20to%20schedule%20a%20career%20consultation." target="_blank" class="btn-primary" style="padding:16px 36px;font-size:16px;">
+      <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp (+91 8451971503)
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="brand-text" style="font-size:16px;">ROOT <span>DOMAIN</span> ACCESS</div>
+        <p>Enterprise IT &amp; Cybersecurity Training Academy. Taught through real home-lab infrastructure and production mechanisms.</p>
+        <div style="margin-top:12px;color:var(--gray);font-size:13px;">
+          Direct: <b>+91 8451971503</b> · <b>samvedme@zohomail.com</b>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h5>Courses</h5>
+          <a href="ccna.html">CCNA (200-301)</a>
+          <a href="rhcsa-rhce.html">RHCSA / RHCE</a>
+          <a href="aws-solutions-architect.html">AWS Solutions Architect</a>
+          <a href="firewall-security.html">Firewall &amp; Security</a>
+          <a href="isc2-cc.html">ISC2 CC</a>
+        </div>
+        <div>
+          <h5>Navigation</h5>
+          <a href="index.html">Home</a>
+          <a href="labs.html">Cloud Racks</a>
+          <a href="about.html">Philosophy</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

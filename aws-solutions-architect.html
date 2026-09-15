@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AWS Solutions Architect Blueprint | Root Domain Access</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html" class="brand">
+      <div class="logo-box"><i class="fa-solid fa-terminal"></i></div>
+      <div class="brand-text">ROOT <span>DOMAIN</span> ACCESS</div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#courses">All Tracks</a>
+      <a href="#curriculum">Syllabus</a>
+      <a href="#labs">20 Labs</a>
+      <a href="#schedules">Schedules</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a href="#enroll" class="btn-enroll-nav">Enroll in Batch →</a>
+  </nav>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumb">
+    <a href="index.html">Courses</a> <span>/</span> Cloud Infrastructure <span>/</span> AWS Solutions Architect (SAA-C03)
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-grid" style="display:grid;grid-template-columns:1.8fr 1.2fr;gap:40px;">
+      <div>
+        <div class="badge-tag" style="border-color:var(--amber);color:var(--amber);">
+          <i class="fa-brands fa-aws"></i> AWS Certified Solutions Architect Associate (SAA-C03)
+        </div>
+        <h1 style="font-size:clamp(32px, 4.5vw, 48px);line-height:1.15;margin:16px 0;">
+          Resilient Cloud Architecture &amp; Infrastructure as Code
+        </h1>
+        <p class="hero-desc">
+          An intensive 80-hour cloud engineering curriculum. Learn how to architect high-availability VPC networks, deploy secure multi-tier containerized microservices on ECS/EKS, configure IAM least-privilege policies, and automate infrastructure with Terraform.
+        </p>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar" style="display:grid;grid-template-columns:repeat(4, 1fr);gap:16px;background:var(--bg-surface);border:1px solid var(--card-border);border-radius:10px;padding:18px 22px;">
+          <div class="stat-item">
+            <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">Duration</div>
+            <div style="font-size:18px;font-weight:700;color:var(--white);">80 <span style="color:var(--green);font-size:14px;">Hrs</span></div>
+          </div>
+          <div class="stat-item">
+            <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">Hands-on Labs</div>
+            <div style="font-size:18px;font-weight:700;color:var(--white);">20 <span style="color:var(--green);font-size:14px;">Labs</span></div>
+          </div>
+          <div class="stat-item">
+            <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">Exam Blueprint</div>
+            <div style="font-size:18px;font-weight:700;color:var(--white);">SAA-C03</div>
+          </div>
+          <div class="stat-item">
+            <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">Format</div>
+            <div style="font-size:18px;font-weight:700;color:var(--white);">Live <span style="color:var(--green);font-size:14px;">1-on-1 / Batch</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Enrollment Card -->
+      <div class="terminal-window" id="enroll">
+        <div class="titlebar">
+          <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+          <div class="titlebar-file">aws_saa_c03.sh</div>
+        </div>
+        <div style="padding:24px;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:16px;border-bottom:1px solid var(--card-border);margin-bottom:18px;">
+            <div>
+              <div style="font-size:12px;color:var(--gray-dim);text-transform:uppercase;">Course Fee</div>
+              <div style="font-size:30px;font-weight:700;color:var(--green);font-family:'Space Grotesk',sans-serif;">₹12,000 <span style="font-size:13px;color:var(--gray);font-weight:400;">/ One-Time</span></div>
+            </div>
+            <div style="font-size:11px;color:var(--gray-dim);text-align:right;">
+              <div>Includes Real AWS Sandbox Labs</div>
+            </div>
+          </div>
+
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:24px;">
+            <li style="font-size:13px;color:var(--gray);display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-check" style="color:var(--cyan);"></i> 80 Hours Live Instructor-Led Architecture Training</li>
+            <li style="font-size:13px;color:var(--gray);display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-check" style="color:var(--cyan);"></i> Custom VPC Design: Public/Private Subnets &amp; NAT Gateways</li>
+            <li style="font-size:13px;color:var(--gray);display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-check" style="color:var(--cyan);"></i> Infrastructure as Code with Terraform &amp; CloudFormation</li>
+            <li style="font-size:13px;color:var(--gray);display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-check" style="color:var(--cyan);"></i> AWS Well-Architected Framework 6-Pillar Audits</li>
+            <li style="font-size:13px;color:var(--gray);display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-check" style="color:var(--cyan);"></i> SAA-C03 Timed Practice Exams &amp; Mock Tests</li>
+          </ul>
+
+          <a href="https://wa.me/918451971503?text=Hi%20Samved,%20I%20want%20to%20enroll%20in%20AWS%20Solutions%20Architect." target="_blank" class="btn-primary" style="display:block;width:100%;text-align:center;padding:14px;">
+            <i class="fa-brands fa-whatsapp"></i> Reserve Seat in Next Batch
+          </a>
+          <div style="text-align:center;font-size:11px;color:var(--gray-dim);margin-top:10px;">
+            Direct phone/WhatsApp: +91 8451971503 · Mumbai / Online
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complete Syllabus -->
+  <section class="section-pad" id="curriculum">
+    <div class="sec-kicker"><i class="fa-solid fa-terminal"></i> $ cat aws_saa_c03_domains.json</div>
+    <h2 class="sec-title">Curriculum Blueprint (4 Official Exam Domains)</h2>
+    <p class="sec-subtitle">Covers every domain in the AWS SAA-C03 blueprint with mechanism-level configuration.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:24px;">
+      <!-- Domain 1 -->
+      <div style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:24px;">
+        <div style="font-size:11px;color:var(--cyan);font-weight:600;letter-spacing:1px;text-transform:uppercase;">Domain 1 · 30% of Exam</div>
+        <h3 style="font-size:18px;margin:6px 0 12px;">Design Secure Architectures</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--gray);">
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> IAM Policies, Roles, Cross-Account Access &amp; Permission Boundaries</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Amazon VPC: Custom subnets, Route Tables, Internet Gateways, NAT Gateways &amp; Network ACLs vs Security Groups</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Secure hybrid connectivity: AWS Site-to-Site VPN, Direct Connect, and Transit Gateway</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Data encryption in transit and at rest using AWS KMS (Customer Managed Keys) &amp; Secrets Manager</li>
+        </ul>
+      </div>
+
+      <!-- Domain 2 -->
+      <div style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:24px;">
+        <div style="font-size:11px;color:var(--cyan);font-weight:600;letter-spacing:1px;text-transform:uppercase;">Domain 2 · 26% of Exam</div>
+        <h3 style="font-size:18px;margin:6px 0 12px;">Design Resilient Architectures</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--gray);">
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Multi-AZ and Multi-Region high availability patterns</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Auto Scaling Groups (ASG) with Application Load Balancers (ALB) and Network Load Balancers (NLB)</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Decoupled event-driven systems using Amazon SQS (FIFO/Standard), SNS &amp; EventBridge</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Disaster Recovery strategies: Backup &amp; Restore, Pilot Light, Warm Standby, Multi-Region Active-Active</li>
+        </ul>
+      </div>
+
+      <!-- Domain 3 -->
+      <div style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:24px;">
+        <div style="font-size:11px;color:var(--cyan);font-weight:600;letter-spacing:1px;text-transform:uppercase;">Domain 3 · 24% of Exam</div>
+        <h3 style="font-size:18px;margin:6px 0 12px;">Design High-Performing Architectures</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--gray);">
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Compute selection: EC2 instance families (compute, memory, storage optimized), Lambda &amp; ECS Fargate</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Storage tiers: S3 Standard, S3 Intelligent-Tiering, Glacier Flexible/Deep, EBS gp3/io2, EFS &amp; FSx for Lustre</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Database architectures: Amazon RDS Multi-AZ, Read Replicas, Aurora Serverless &amp; DynamoDB Global Tables</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Edge acceleration: Amazon CloudFront CDN, Route 53 latency/geo routing, and AWS Global Accelerator</li>
+        </ul>
+      </div>
+
+      <!-- Domain 4 -->
+      <div style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:24px;">
+        <div style="font-size:11px;color:var(--cyan);font-weight:600;letter-spacing:1px;text-transform:uppercase;">Domain 4 · 20% of Exam</div>
+        <h3 style="font-size:18px;margin:6px 0 12px;">Design Cost-Optimized Architectures</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--gray);">
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Pricing models: On-Demand, Savings Plans, Reserved Instances, Spot Instances &amp; Spot Fleets</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> S3 Lifecycle rules and automated transition to archive tiers</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> AWS Cost Explorer, Budgets, and AWS Organizations Consolidated Billing</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Serverless optimization: replacing idle compute with AWS Lambda + API Gateway</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 20 Hands-on Labs -->
+  <section class="section-pad" id="labs">
+    <div class="sec-kicker"><i class="fa-solid fa-microchip"></i> $ sudo aws-lab-matrix --list</div>
+    <h2 class="sec-title">20 Hands-on Cloud Architecture Labs</h2>
+    <p class="sec-subtitle">Build real infrastructure in live AWS sandbox environments.</p>
+
+    <div style="background:var(--bg-surface);border:1px solid var(--card-border);border-radius:12px;padding:28px;">
+      <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:14px;">
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 01</b> · Multi-Tier Custom VPC with Public/Private Subnets &amp; NAT</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 02</b> · IAM Least-Privilege Policies, Roles &amp; MFA Enforcement</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 03</b> · VPC Peering &amp; Inter-Region Routing Verification</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 04</b> · Transit Gateway Hub-and-Spoke Enterprise Architecture</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 05</b> · Auto Scaling Group with Application Load Balancer (ALB)</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 06</b> · S3 Static Website with CloudFront CDN &amp; Custom SSL</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 07</b> · S3 Bucket Policies, KMS Encryption &amp; Cross-Region Replication</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 08</b> · Amazon RDS Multi-AZ Database with Read Replicas</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 09</b> · Amazon DynamoDB Single-Table Design &amp; Global Tables</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 10</b> · Serverless REST API with API Gateway, Lambda &amp; DynamoDB</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 11</b> · Asynchronous SQS Queue &amp; Worker EC2 Auto-Scaling</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 12</b> · Dockerized Application Deployment on Amazon ECS Fargate</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 13</b> · Amazon EFS Multi-AZ Shared Storage for Web Servers</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 14</b> · Route 53 Weighted &amp; Geolocation DNS Routing Policies</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 15</b> · AWS WAF (Web Application Firewall) SQLi &amp; XSS Rules</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 16</b> · AWS Secrets Manager Automatic Database Credential Rotation</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 17</b> · CloudWatch Alarms, SNS Notifications &amp; EventBridge Rules</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 18</b> · Terraform IaC: Modular Multi-Tier VPC &amp; ASG Provisioning</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 19</b> · Multi-Region Disaster Recovery Simulation (Warm Standby)</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 20</b> · SAA-C03 Real-world Scenario Architecture Review</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <div class="cta-banner">
+    <h2>Design Resilient Cloud Systems</h2>
+    <p>Join the next live batch at Root Domain Access. Learn how to architect real production cloud infrastructure.</p>
+    <a href="https://wa.me/918451971503?text=Hi%20Samved,%20I%20am%20ready%20to%20enroll%20in%20AWS%20Solutions%20Architect." target="_blank" class="btn-primary" style="padding:16px 36px;font-size:16px;">
+      <i class="fa-brands fa-whatsapp"></i> Enroll Now via WhatsApp / Call
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="brand-text" style="font-size:16px;">ROOT <span>DOMAIN</span> ACCESS</div>
+        <p>Enterprise IT &amp; Cybersecurity Training Academy. Taught through real home-lab infrastructure and production mechanisms.</p>
+        <div style="margin-top:12px;color:var(--gray);font-size:13px;">
+          Direct: <b>+91 8451971503</b> · <b>samvedme@zohomail.com</b>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h5>Courses</h5>
+          <a href="ccna.html">CCNA (200-301)</a>
+          <a href="rhcsa-rhce.html">RHCSA / RHCE</a>
+          <a href="aws-solutions-architect.html">AWS Solutions Architect</a>
+          <a href="firewall-security.html">Firewall &amp; Security</a>
+          <a href="isc2-cc.html">ISC2 CC</a>
+        </div>
+        <div>
+          <h5>Navigation</h5>
+          <a href="index.html">Home</a>
+          <a href="#curriculum">Syllabus</a>
+          <a href="#labs">20 Labs</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:30px;text-align:center;font-size:11px;color:var(--gray-dim);border-top:1px solid rgba(255,255,255,0.03);padding-top:20px;">
+      © 2026 Root Domain Access. All rights reserved. AWS® is a registered trademark of Amazon Web Services, Inc.
+    </div>
+  </footer>
+
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

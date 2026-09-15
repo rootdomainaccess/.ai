@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>24/7 Cloud & Homelab Racks | Root Domain Access</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html" class="brand">
+      <div class="logo-box"><i class="fa-solid fa-terminal"></i></div>
+      <div class="brand-text">ROOT <span>DOMAIN</span> ACCESS</div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#courses">Courses</a>
+      <a href="labs.html" class="active">Cloud Racks</a>
+      <a href="about.html">Philosophy</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="contact.html" class="btn-enroll-nav">Enroll in Batch →</a>
+  </nav>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> <span>/</span> Infrastructure <span>/</span> 24/7 Remote Cloud &amp; Homelab Racks
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-grid" style="display:grid;grid-template-columns:1.8fr 1.2fr;gap:40px;">
+      <div>
+        <div class="badge-tag" style="border-color:var(--cyan);color:var(--cyan);">
+          <i class="fa-solid fa-server"></i> Platform-As-A-Service Lab Architecture
+        </div>
+        <h1 style="font-size:clamp(32px, 4.5vw, 48px);line-height:1.15;margin:16px 0;">
+          Your Dedicated 24/7 Cloud &amp; Hardware Racks
+        </h1>
+        <p class="hero-desc">
+          No need to buy thousands of dollars worth of Cisco switches, enterprise firewalls, or beefy server hardware. Every Root Domain Access student receives continuous remote VPN access to our dedicated physical racks and virtualized cloud topologies.
+        </p>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar" style="display:grid;grid-template-columns:repeat(4, 1fr);gap:16px;background:var(--bg-surface);border:1px solid var(--card-border);border-radius:10px;padding:18px 22px;">
+          <div class="stat-item">
+            <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">Availability</div>
+            <div style="font-size:18px;font-weight:700;color:var(--white);">24/7 <span style="color:var(--green);font-size:14px;">Online</span></div>
+          </div>
+          <div class="stat-item">
+            <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">Access VPN</div>
+            <div style="font-size:18px;font-weight:700;color:var(--white);">ZeroTier</div>
+          </div>
+          <div class="stat-item">
+            <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">Hypervisors</div>
+            <div style="font-size:18px;font-weight:700;color:var(--white);">ESXi / KVM</div>
+          </div>
+          <div class="stat-item">
+            <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">Cost to Student</div>
+            <div style="font-size:18px;font-weight:700;color:var(--white);">₹0 <span style="color:var(--green);font-size:14px;">Included</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Terminal Window -->
+      <div class="terminal-window">
+        <div class="titlebar">
+          <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+          <div class="titlebar-file">rack_topology_status.sh</div>
+        </div>
+        <div style="padding:24px;">
+          <div style="font-size:12.5px;color:var(--gray);line-height:1.7;">
+            <div style="color:var(--cyan);margin-bottom:8px;"># Live Rack Node Health</div>
+            <div>[<span style="color:var(--green);">ONLINE</span>] Cisco Catalyst 2960 / 3750 Switch Pods</div>
+            <div>[<span style="color:var(--green);">ONLINE</span>] Cisco ISR 4331 Router Pods</div>
+            <div>[<span style="color:var(--green);">ONLINE</span>] Sophos XGS Enterprise Firewall Pod</div>
+            <div>[<span style="color:var(--green);">ONLINE</span>] RHEL 9 Enterprise VM Cluster</div>
+            <div>[<span style="color:var(--green);">ONLINE</span>] Wazuh SIEM Log Aggregator &amp; Kali Node</div>
+            <div>[<span style="color:var(--green);">ONLINE</span>] ZeroTier Private Overlay Network (10.147.0.0/16)</div>
+            <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--card-border);color:var(--cyan);">
+              Instant connection via 1-click ZeroTier client from Windows, macOS, or Linux.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section-pad">
+    <div class="sec-kicker"><i class="fa-solid fa-plug"></i> $ netstat -tulpn --remote-labs</div>
+    <h2 class="sec-title">How Remote Lab Access Works</h2>
+    <p class="sec-subtitle">Step-by-step workflow for connecting to your dedicated training environment.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:24px;">
+      <!-- Step 1 -->
+      <div style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:24px;">
+        <div style="font-size:24px;color:var(--cyan);margin-bottom:12px;">01</div>
+        <h3 style="font-size:18px;margin-bottom:10px;">ZeroTier VPN Join</h3>
+        <p style="font-size:13.5px;color:var(--gray);line-height:1.6;">
+          You receive a secure 16-digit network ID. Install the lightweight ZeroTier client on your laptop to bridge directly into our isolated lab subnet with encrypted end-to-end routing.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:24px;">
+        <div style="font-size:24px;color:var(--green);margin-bottom:12px;">02</div>
+        <h3 style="font-size:18px;margin-bottom:10px;">SSH &amp; Web Console Access</h3>
+        <p style="font-size:13.5px;color:var(--gray);line-height:1.6;">
+          Connect directly via native SSH to your assigned Linux nodes, Cisco consoles, or open the web management GUI for Sophos XGS, pfSense, Cockpit, or Portainer.
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:24px;">
+        <div style="font-size:24px;color:var(--amber);margin-bottom:12px;">03</div>
+        <h3 style="font-size:18px;margin-bottom:10px;">Reset &amp; Topology Swap</h3>
+        <p style="font-size:13.5px;color:var(--gray);line-height:1.6;">
+          Finished a lab or want to start fresh? Use our automated lab reset script to wipe startup configurations, reload baseline topologies, and practice speed-runs.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <div class="cta-banner">
+    <h2>Ready to Practice on Real Hardware?</h2>
+    <p>Enroll in any course at Root Domain Access and get instant access to our remote lab platform.</p>
+    <a href="https://wa.me/918451971503?text=Hi%20Samved,%20I%20want%20to%20learn%20more%20about%20lab%20access." target="_blank" class="btn-primary" style="padding:16px 36px;font-size:16px;">
+      <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp (+91 8451971503)
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="brand-text" style="font-size:16px;">ROOT <span>DOMAIN</span> ACCESS</div>
+        <p>Enterprise IT &amp; Cybersecurity Training Academy. Taught through real home-lab infrastructure and production mechanisms.</p>
+        <div style="margin-top:12px;color:var(--gray);font-size:13px;">
+          Direct: <b>+91 8451971503</b> · <b>samvedme@zohomail.com</b>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h5>Courses</h5>
+          <a href="ccna.html">CCNA (200-301)</a>
+          <a href="rhcsa-rhce.html">RHCSA / RHCE</a>
+          <a href="aws-solutions-architect.html">AWS Solutions Architect</a>
+          <a href="firewall-security.html">Firewall &amp; Security</a>
+          <a href="isc2-cc.html">ISC2 CC</a>
+        </div>
+        <div>
+          <h5>Navigation</h5>
+          <a href="index.html">Home</a>
+          <a href="labs.html">Cloud Racks</a>
+          <a href="about.html">Philosophy</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

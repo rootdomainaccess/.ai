@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CCNA (200-301) Course Blueprint | Root Domain Access</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<style>
+  :root{
+    --bg:#07090e;
+    --bg-surface:#0c1017;
+    --bg-card:#111722;
+    --card-border:#1a2736;
+    --card-border-hover:#22ffa1;
+    --green:#22ffa1;
+    --green-glow:rgba(34,255,161,0.15);
+    --cyan:#00f0ff;
+    --cyan-glow:rgba(0,240,255,0.15);
+    --amber:#ffb84d;
+    --red:#ff5252;
+    --white:#f3f8fb;
+    --gray:#94a3b8;
+    --gray-dim:#64748b;
+    --grid:rgba(30, 41, 59, 0.45);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--bg);
+    color:var(--white);
+    font-family:'JetBrains Mono', monospace;
+    line-height:1.6;
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size:48px 48px;
+    background-attachment:fixed;
+    position:relative;
+    overflow-x:hidden;
+  }
+
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+      radial-gradient(circle at 90% 10%, rgba(0,240,255,0.08), transparent 45%),
+      radial-gradient(circle at 10% 90%, rgba(34,255,161,0.07), transparent 45%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  .wrap{max-width:1200px;margin:0 auto;padding:0 28px;position:relative;z-index:1;}
+  h1,h2,h3,h4,h5{font-family:'Space Grotesk', sans-serif;}
+
+  /* Header / Nav */
+  nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:22px 0;
+    border-bottom:1px solid rgba(34,255,161,0.12);
+    backdrop-filter:blur(8px);
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(7,9,14,0.85);
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    color:inherit;
+  }
+  .logo-box{
+    width:38px;height:38px;
+    border:1.5px solid var(--cyan);
+    border-radius:6px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:14px;color:var(--cyan);
+    background:rgba(0,240,255,0.05);
+    box-shadow:0 0 12px var(--cyan-glow);
+  }
+  .brand-text{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:700;
+    font-size:17px;
+    letter-spacing:0.5px;
+  }
+  .brand-text span{color:var(--green);}
+  .nav-links{display:flex;gap:24px;font-size:13px;}
+  .nav-links a{color:var(--gray);text-decoration:none;transition:color .2s;}
+  .nav-links a:hover{color:var(--cyan);}
+  .btn-enroll-nav{
+    background:transparent;
+    color:var(--green);
+    border:1px solid var(--green);
+    padding:8px 18px;
+    border-radius:6px;
+    font-size:13px;
+    font-weight:600;
+    text-decoration:none;
+    transition:all .2s;
+  }
+  .btn-enroll-nav:hover{
+    background:var(--green);
+    color:#05100b;
+    box-shadow:0 0 15px var(--green-glow);
+  }
+
+  /* Breadcrumb & Hero */
+  .breadcrumb{
+    padding:24px 0 10px;
+    font-size:12px;
+    color:var(--gray-dim);
+  }
+  .breadcrumb a{color:var(--gray);text-decoration:none;}
+  .breadcrumb a:hover{color:var(--cyan);}
+  .breadcrumb span{color:var(--cyan);margin:0 6px;}
+
+  .hero{
+    padding:30px 0 40px;
+    border-bottom:1px solid var(--card-border);
+  }
+  .hero-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:4px 12px;
+    border-radius:20px;
+    background:rgba(34,255,161,0.08);
+    border:1px solid rgba(34,255,161,0.25);
+    color:var(--green);
+    font-size:12px;
+    font-weight:600;
+    margin-bottom:18px;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.8fr 1.2fr;
+    gap:40px;
+    align-items:start;
+  }
+  .hero h1{
+    font-size:clamp(32px, 4.5vw, 50px);
+    font-weight:700;
+    line-height:1.15;
+    margin-bottom:16px;
+  }
+  .hero-desc{
+    color:var(--gray);
+    font-family:'Space Grotesk', sans-serif;
+    font-size:16.5px;
+    line-height:1.6;
+    margin-bottom:28px;
+  }
+
+  /* Highlights Banner */
+  .stats-bar{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:16px;
+    background:var(--bg-surface);
+    border:1px solid var(--card-border);
+    border-radius:10px;
+    padding:18px 22px;
+  }
+  .stat-item .stat-label{font-size:11px;color:var(--gray-dim);text-transform:uppercase;letter-spacing:1px;}
+  .stat-item .stat-val{font-size:18px;font-weight:700;color:var(--white);margin-top:2px;font-family:'Space Grotesk', sans-serif;}
+  .stat-item .stat-val span{color:var(--green);font-size:14px;}
+
+  /* Hero Sidebar Card */
+  .enroll-box{
+    background:var(--bg-card);
+    border:1px solid var(--card-border);
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+  }
+  .titlebar{
+    background:#080c12;
+    padding:12px 16px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    border-bottom:1px solid var(--card-border);
+  }
+  .dot{width:9px;height:9px;border-radius:50%;}
+  .dot.r{background:#ff5c58;}
+  .dot.y{background:#ffbd2e;}
+  .dot.g{background:#28c93f;}
+  .titlebar-text{font-size:11px;color:var(--gray-dim);margin-left:auto;}
+
+  .enroll-content{padding:24px;}
+  .pricing-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    padding-bottom:16px;
+    border-bottom:1px solid var(--card-border);
+    margin-bottom:18px;
+  }
+  .price-num{font-size:30px;font-weight:700;color:var(--green);font-family:'Space Grotesk', sans-serif;}
+  .price-sub{font-size:11px;color:var(--gray-dim);text-align:right;}
+
+  .features-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:24px;}
+  .features-list li{font-size:13px;color:var(--gray);display:flex;align-items:center;gap:10px;}
+  .features-list li i{color:var(--cyan);font-size:12px;}
+
+  .btn-primary-large{
+    display:block;
+    width:100%;
+    text-align:center;
+    background:var(--green);
+    color:#031209;
+    padding:14px;
+    border-radius:8px;
+    font-weight:700;
+    font-family:'Space Grotesk',sans-serif;
+    font-size:15px;
+    text-decoration:none;
+    transition:all .2s;
+  }
+  .btn-primary-large:hover{
+    box-shadow:0 0 20px var(--green-glow);
+    transform:translateY(-1px);
+  }
+
+  /* Section Structure */
+  .section-pad{padding:60px 0;}
+  .sec-kicker{color:var(--cyan);font-size:13px;margin-bottom:6px;display:flex;align-items:center;gap:8px;}
+  .sec-title{font-size:30px;font-weight:700;margin-bottom:12px;}
+  .sec-subtitle{color:var(--gray);font-family:'Space Grotesk',sans-serif;font-size:15px;max-width:750px;margin-bottom:32px;}
+
+  /* Tabbed Modules */
+  .tab-nav{
+    display:flex;
+    gap:10px;
+    border-bottom:1px solid var(--card-border);
+    padding-bottom:12px;
+    margin-bottom:28px;
+    overflow-x:auto;
+  }
+  .tab-btn{
+    background:transparent;
+    border:1px solid var(--card-border);
+    color:var(--gray);
+    padding:10px 18px;
+    border-radius:6px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:13px;
+    cursor:pointer;
+    transition:all .2s;
+    white-space:nowrap;
+  }
+  .tab-btn.active, .tab-btn:hover{
+    border-color:var(--cyan);
+    color:var(--white);
+    background:rgba(0,240,255,0.06);
+  }
+
+  .module-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:24px;
+  }
+
+  .module-card{
+    background:var(--bg-card);
+    border:1px solid var(--card-border);
+    border-radius:10px;
+    padding:24px;
+    transition:border-color .2s;
+  }
+  .module-card:hover{border-color:rgba(0,240,255,0.4);}
+  .mod-num{font-size:11px;color:var(--cyan);font-weight:600;letter-spacing:1px;text-transform:uppercase;}
+  .mod-title{font-size:18px;font-weight:700;margin:6px 0 12px;color:var(--white);}
+  .mod-items{list-style:none;display:flex;flex-direction:column;gap:8px;}
+  .mod-items li{font-size:13px;color:var(--gray);display:flex;gap:8px;align-items:flex-start;}
+  .mod-items li::before{content:"▹";color:var(--green);font-size:13px;flex-shrink:0;}
+
+  /* 32 Labs Grid */
+  .labs-container{
+    background:var(--bg-surface);
+    border:1px solid var(--card-border);
+    border-radius:12px;
+    padding:28px;
+  }
+  .lab-group{margin-bottom:30px;}
+  .lab-group-title{
+    font-size:14px;
+    color:var(--amber);
+    border-bottom:1px dashed var(--card-border);
+    padding-bottom:8px;
+    margin-bottom:16px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .labs-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:14px;
+  }
+  .lab-badge{
+    background:var(--bg-card);
+    border:1px solid var(--card-border);
+    border-radius:6px;
+    padding:12px 14px;
+    font-size:12.5px;
+    color:var(--gray);
+    transition:all .2s;
+  }
+  .lab-badge:hover{
+    border-color:var(--green);
+    color:var(--white);
+    background:rgba(34,255,161,0.03);
+    transform:translateY(-2px);
+  }
+  .lab-badge b{color:var(--cyan);font-weight:600;}
+
+  /* Batch Timings & Matrix */
+  .schedule-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:24px;
+  }
+  .schedule-card{
+    background:var(--bg-card);
+    border:1px solid var(--card-border);
+    border-radius:10px;
+    padding:24px;
+  }
+  .schedule-badge{
+    display:inline-block;
+    font-size:11px;
+    color:var(--green);
+    background:rgba(34,255,161,0.1);
+    padding:3px 8px;
+    border-radius:4px;
+    margin-bottom:12px;
+  }
+  .schedule-card h4{font-size:18px;margin-bottom:14px;}
+  .timing-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
+  .timing-list li{
+    display:flex;
+    justify-content:space-between;
+    font-size:13px;
+    padding-bottom:8px;
+    border-bottom:1px solid rgba(255,255,255,0.04);
+    color:var(--gray);
+  }
+  .timing-list li span:last-child{color:var(--white);font-weight:600;}
+
+  /* FAQ Accordion */
+  .faq-list{display:flex;flex-direction:column;gap:14px;max-width:900px;}
+  .faq-item{
+    background:var(--bg-card);
+    border:1px solid var(--card-border);
+    border-radius:8px;
+    overflow:hidden;
+  }
+  .faq-q{
+    padding:18px 20px;
+    font-size:15px;
+    font-weight:600;
+    color:var(--white);
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    user-select:none;
+    font-family:'Space Grotesk', sans-serif;
+  }
+  .faq-q i{color:var(--cyan);transition:transform .2s;}
+  .faq-a{
+    padding:0 20px 18px;
+    font-size:13.5px;
+    color:var(--gray);
+    line-height:1.6;
+    display:none;
+    border-top:1px solid rgba(255,255,255,0.03);
+    padding-top:12px;
+  }
+  .faq-item.open .faq-a{display:block;}
+  .faq-item.open .faq-q i{transform:rotate(180deg);}
+
+  /* CTA Banner */
+  .cta-banner{
+    background:linear-gradient(135deg, #091a18 0%, #0c1524 100%);
+    border:1px solid var(--green);
+    box-shadow:0 0 30px var(--green-glow);
+    border-radius:12px;
+    padding:40px;
+    text-align:center;
+    margin:60px 0 80px;
+  }
+  .cta-banner h2{font-size:32px;font-weight:700;margin-bottom:12px;}
+  .cta-banner p{color:var(--gray);font-size:16px;max-width:650px;margin:0 auto 26px;font-family:'Space Grotesk', sans-serif;}
+
+  /* Footer */
+  footer{
+    border-top:1px solid var(--card-border);
+    padding:40px 0 60px;
+    font-size:13px;
+    color:var(--gray-dim);
+  }
+  .footer-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:30px;
+  }
+  .footer-left p{margin-top:8px;color:var(--gray);max-width:360px;}
+  .footer-links{display:flex;gap:40px;}
+  .footer-links div{display:flex;flex-direction:column;gap:8px;}
+  .footer-links div h5{color:var(--white);font-size:14px;margin-bottom:4px;}
+  .footer-links a{color:var(--gray);text-decoration:none;transition:color .2s;}
+  .footer-links a:hover{color:var(--cyan);}
+
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr;}
+    .stats-bar{grid-template-columns:repeat(2,1fr);}
+    .module-grid{grid-template-columns:1fr;}
+    .labs-grid{grid-template-columns:repeat(2,1fr);}
+    .schedule-grid{grid-template-columns:1fr;}
+  }
+  @media (max-width:600px){
+    .stats-bar{grid-template-columns:1fr;}
+    .labs-grid{grid-template-columns:1fr;}
+    .nav-links{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html" class="brand">
+      <div class="logo-box"><i class="fa-solid fa-terminal"></i></div>
+      <div class="brand-text">ROOT <span>DOMAIN</span> ACCESS</div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#courses">All Tracks</a>
+      <a href="#curriculum">Syllabus</a>
+      <a href="#labs">32 Labs</a>
+      <a href="#schedules">Schedules</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a href="#enroll" class="btn-enroll-nav">Enroll in Batch →</a>
+  </nav>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumb">
+    <a href="index.html">Courses</a> <span>/</span> Cisco Network Engineering <span>/</span> CCNA (200-301)
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-tag">
+          <i class="fa-solid fa-shield-halved"></i> Cisco Certified Network Associate (CCNA 200-301)
+        </div>
+        <h1>Enterprise Routing, Switching & Network Automation</h1>
+        <p class="hero-desc">
+          A rigorous 120-hour, instructor-led engineering track built for production readiness. Master IPv4/IPv6 architectures, OSPF routing, VLAN segmentation, Spanning Tree, Layer-2 attack mitigation, and Python/Ansible network programmability.
+        </p>
+
+        <!-- Live Stats Banner -->
+        <div class="stats-bar">
+          <div class="stat-item">
+            <div class="stat-label">Total Duration</div>
+            <div class="stat-val">120 <span>Hrs</span></div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Hands-on Labs</div>
+            <div class="stat-val">32 <span>Racks</span></div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Skill Level</div>
+            <div class="stat-val">Zero → Pro</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Format</div>
+            <div class="stat-val">Live <span>1-on-1 / Batch</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Enrollment Card -->
+      <div class="enroll-box" id="enroll">
+        <div class="titlebar">
+          <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+          <div class="titlebar-text">session_init --batch-2026.sh</div>
+        </div>
+        <div class="enroll-content">
+          <div class="pricing-row">
+            <div>
+              <div style="font-size:12px;color:var(--gray-dim);text-transform:uppercase;">Complete Track Fee</div>
+              <div class="price-num">₹15,000 <span style="font-size:13px;color:var(--gray);font-weight:400;">/ One-Time</span></div>
+            </div>
+            <div class="price-sub">
+              <div>Modular: ₹10,500 (M1)</div>
+              <div>+ ₹5,500 (M2)</div>
+            </div>
+          </div>
+
+          <ul class="features-list">
+            <li><i class="fa-solid fa-check"></i> 120 Hours Live Instructor-Led Sessions</li>
+            <li><i class="fa-solid fa-check"></i> 24/7 Homelab & Cloud Rack Remote Access</li>
+            <li><i class="fa-solid fa-check"></i> 32 Dedicated Topology & Packet Tracer Labs</li>
+            <li><i class="fa-solid fa-check"></i> Wireshark Packet-Level Mechanism Breakdown</li>
+            <li><i class="fa-solid fa-check"></i> CCNA 200-301 Mock Exam & Dump Drill Prep</li>
+            <li><i class="fa-solid fa-check"></i> Real Enterprise Interview Troubleshooting Scenarios</li>
+          </ul>
+
+          <a href="https://wa.me/918451971503?text=Hi%20Samved,%20I%20want%20to%20enroll%20in%20the%20CCNA%20Course%20at%20Root%20Domain%20Access." target="_blank" class="btn-primary-large">
+            <i class="fa-brands fa-whatsapp"></i> Reserve Seat in Next Batch
+          </a>
+          <div style="text-align:center;font-size:11px;color:var(--gray-dim);margin-top:10px;">
+            Direct phone/WhatsApp: +91 8451971503 · Mumbai / Online
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complete 6 Domains Syllabus -->
+  <section class="section-pad" id="curriculum">
+    <div class="sec-kicker"><i class="fa-solid fa-terminal"></i> $ cat ccna_200-301_domains.json</div>
+    <h2 class="sec-title">Curriculum Blueprint (6 Official Exam Domains)</h2>
+    <p class="sec-subtitle">
+      Fully aligned with Cisco's 200-301 blueprint, augmented with real enterprise troubleshooting methodologies.
+    </p>
+
+    <div class="module-grid">
+      <!-- Domain 1 -->
+      <div class="module-card">
+        <div class="mod-num">Domain 1 · 20% of Exam</div>
+        <div class="mod-title">Network Fundamentals</div>
+        <ul class="mod-items">
+          <li>Role of Routers, Layer 2/3 Switches, Next-Gen Firewalls & Access Points</li>
+          <li>2-Tier, 3-Tier Enterprise Campus Architectures vs Spine-Leaf Topologies</li>
+          <li>Copper (Cat5e/6/6a), Single-mode & Multi-mode Fiber, PoE standards (802.3af/at/bt)</li>
+          <li>IPv4 Subnetting (VLSM, CIDR, Network/Host boundary math) & IPv6 Address Types (Global Unicast, Unique Local, Link-Local)</li>
+          <li>Virtualization fundamentals: Hypervisor Type 1 (ESXi) vs Type 2, Containers (Docker) & Virtual Switches</li>
+          <li>Wireless RF principles: 2.4GHz vs 5GHz/6GHz channels, RSSI, SNR, SSID & Basic Service Sets</li>
+        </ul>
+      </div>
+
+      <!-- Domain 2 -->
+      <div class="module-card">
+        <div class="mod-num">Domain 2 · 20% of Exam</div>
+        <div class="mod-title">Network Access & Layer-2 Switching</div>
+        <ul class="mod-items">
+          <li>VLAN Configuration, Access Port assignments & 802.1Q encapsulation</li>
+          <li>Trunking protocol, Native VLAN security risks & Allowed VLAN pruning</li>
+          <li>Layer 2 Discovery Protocols: CDP (Cisco Discovery Protocol) & LLDP</li>
+          <li>EtherChannel (Link Aggregation): LACP (802.3ad), PAgP, and static bundle modes</li>
+          <li>Spanning Tree Protocol (STP 802.1D, Rapid PVST+ 802.1w): Root bridge election, PortFast, BPDU Guard</li>
+          <li>Cisco Wireless Architecture: Lightweight APs (LWAP), Wireless LAN Controllers (WLC), CAPWAP tunneling & GUI WLAN setup</li>
+        </ul>
+      </div>
+
+      <!-- Domain 3 -->
+      <div class="module-card">
+        <div class="mod-num">Domain 3 · 25% of Exam</div>
+        <div class="mod-title">IP Connectivity & Routing Architecture</div>
+        <ul class="mod-items">
+          <li>Routing Table internals: Administrative Distance (AD), Metric calculation, Longest Prefix Match</li>
+          <li>IPv4 & IPv6 Static Routing: Next-hop IP, Exit Interface, Default Static (0.0.0.0/0) & Floating Static backup routes</li>
+          <li>Inter-VLAN Routing: Router-on-a-Stick (802.1Q sub-interfaces) vs Layer-3 Switch Switch Virtual Interfaces (SVI)</li>
+          <li>Single-Area OSPFv2 Deep Dive: Router ID, Hello/Dead timers, Neighbor states (Down to Full), DR/BDR election</li>
+          <li>OSPF LSDB, Link State Advertisements (Type 1 & Type 2), cost metric tuning & passive-interface configuration</li>
+          <li>Diagnosing routing loops, split-horizon rules, and black-hole route resolution</li>
+        </ul>
+      </div>
+
+      <!-- Domain 4 -->
+      <div class="module-card">
+        <div class="mod-num">Domain 4 · 10% of Exam</div>
+        <div class="mod-title">IP Services & Operations</div>
+        <ul class="mod-items">
+          <li>Inside Source NAT: Static 1:1 NAT, Dynamic Pool NAT & Port Address Translation (PAT / NAT Overload)</li>
+          <li>NTP (Network Time Protocol) client/server synchronization & stratum hierarchy</li>
+          <li>DHCP Server configuration, DHCP Client behavior, DORA process & IP Helper Address (DHCP Relay)</li>
+          <li>DNS operation, name resolution and caching inspection</li>
+          <li>SNMPv2c vs SNMPv3 (AuthNoPriv, AuthPriv with SHA/AES) & Syslog logging levels (0-7)</li>
+          <li>Quality of Service (QoS): Per-Hop Behavior (PHB), Classification, Marking (DSCP/CoS), Queuing (LLQ, CBWFQ), Policing vs Shaping</li>
+          <li>Remote access protocols: SSHv2 key generation vs Telnet deprecation, SCP/TFTP/FTP backups</li>
+        </ul>
+      </div>
+
+      <!-- Domain 5 -->
+      <div class="module-card">
+        <div class="mod-num">Domain 5 · 15% of Exam</div>
+        <div class="mod-title">Security Fundamentals & Layer 2 Hardening</div>
+        <ul class="mod-items">
+          <li>Threat landscape: Social Engineering, MITM, DDoS, Spoofing, Malware & Zero Trust principles</li>
+          <li>Password security: Type 0, 5 (MD5), 7, 8, 9 (Scrypt) encryption & local user privilege levels</li>
+          <li>Standard & Extended IPv4 Access Control Lists (ACLs): Sequence numbering, wildcard masks, established keyword</li>
+          <li>Layer-2 Security: Port Security (Static, Dynamic, Sticky MAC, Violation modes: Protect, Restrict, Shutdown)</li>
+          <li>DHCP Snooping & Dynamic ARP Inspection (DAI) against ARP poisoning/cache spoofing</li>
+          <li>AAA Concepts (Authentication, Authorization, Accounting) via TACACS+ and RADIUS</li>
+          <li>IPsec VPN Fundamentals: IKE Phase 1 (ISAKMP) / Phase 2 (IPsec SA), ESP, AH, Diffie-Hellman groups</li>
+        </ul>
+      </div>
+
+      <!-- Domain 6 -->
+      <div class="module-card">
+        <div class="mod-num">Domain 6 · 10% of Exam</div>
+        <div class="mod-title">Automation & Network Programmability</div>
+        <ul class="mod-items">
+          <li>Traditional CLI-based Management vs Controller-Led Software Defined Networking (SDN)</li>
+          <li>Control Plane vs Data Plane vs Management Plane separation</li>
+          <li>Overlay, Underlay & Fabric architectures (Cisco DNA Center / Cisco Catalyst Center)</li>
+          <li>RESTful APIs: HTTP Verbs (GET, POST, PUT, DELETE, PATCH), Status Codes (200, 201, 400, 401, 403, 404, 500)</li>
+          <li>Data Serialization Formats: Reading, validating and structuring JSON, YAML & XML payloads</li>
+          <li>Configuration Management Tools comparison: Ansible (Agentless / Push), Puppet & Chef (Agent-based / Pull)</li>
+          <li>Python network scripting basics with Netmiko and RESTCONF/NETCONF concepts</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 32 Real Hands-On Labs -->
+  <section class="section-pad" id="labs">
+    <div class="sec-kicker"><i class="fa-solid fa-microchip"></i> $ sudo lab-manager --list-all</div>
+    <h2 class="sec-title">32 Dedicated Real-World Hands-on Labs</h2>
+    <p class="sec-subtitle">
+      No slide presentations without terminals. Every student builds, breaks, packet-captures, and fixes all 32 lab topologies.
+    </p>
+
+    <div class="labs-container">
+      
+      <!-- Group 1 -->
+      <div class="lab-group">
+        <div class="lab-group-title"><i class="fa-solid fa-power-off"></i> Foundation, Boot & Device Initial Config</div>
+        <div class="labs-grid">
+          <div class="lab-badge"><b>Lab 01</b> · Console/AUX, POST & ROMmon Recovery</div>
+          <div class="lab-badge"><b>Lab 02</b> · CLI Modes, Config Dialog & Register Setup</div>
+          <div class="lab-badge"><b>Lab 03</b> · Hostname, Secret Passwords, Banner & SSH</div>
+          <div class="lab-badge"><b>Lab 04</b> · Cisco IOS Backup, Restore & TFTP Server</div>
+          <div class="lab-badge"><b>Lab 05</b> · CDP & LLDP Neighbor Discovery & Mismatch Debug</div>
+        </div>
+      </div>
+
+      <!-- Group 2 -->
+      <div class="lab-group">
+        <div class="lab-group-title"><i class="fa-solid fa-route"></i> Enterprise Routing & Filtering Labs</div>
+        <div class="labs-grid">
+          <div class="lab-badge"><b>Lab 06</b> · IPv4 Static & Floating Backup Routing</div>
+          <div class="lab-badge"><b>Lab 07</b> · IPv6 Static & Default Route Topologies</div>
+          <div class="lab-badge"><b>Lab 08</b> · Single-Area OSPFv2, DR/BDR Election & Neighbors</div>
+          <div class="lab-badge"><b>Lab 09</b> · Standard & Extended IPv4 Named ACLs</div>
+          <div class="lab-badge"><b>Lab 10</b> · Router-on-a-Stick Inter-VLAN Sub-interfaces</div>
+        </div>
+      </div>
+
+      <!-- Group 3 -->
+      <div class="lab-group">
+        <div class="lab-group-title"><i class="fa-solid fa-network-wired"></i> Switching & Campus LAN Services</div>
+        <div class="labs-grid">
+          <div class="lab-badge"><b>Lab 11</b> · Catalyst VLAN Database & Access Assignments</div>
+          <div class="lab-badge"><b>Lab 12</b> · 802.1Q Trunking, Native VLAN & Allowed Pruning</div>
+          <div class="lab-badge"><b>Lab 13</b> · Layer-3 Switch SVI & Multi-VLAN Routing</div>
+          <div class="lab-badge"><b>Lab 14</b> · STP Root Bridge Tuning, PortFast & BPDU Guard</div>
+          <div class="lab-badge"><b>Lab 15</b> · EtherChannel Aggregation (PAgP, LACP & Static)</div>
+          <div class="lab-badge"><b>Lab 16</b> · Switch Port Security (Static, Dynamic & Sticky MAC)</div>
+        </div>
+      </div>
+
+      <!-- Group 4 -->
+      <div class="lab-group">
+        <div class="lab-group-title"><i class="fa-solid fa-globe"></i> IP Services, NAT & Wireless Labs</div>
+        <div class="labs-grid">
+          <div class="lab-badge"><b>Lab 17</b> · Static 1-to-1 NAT Translation</div>
+          <div class="lab-badge"><b>Lab 18</b> · Dynamic Pool NAT Configuration</div>
+          <div class="lab-badge"><b>Lab 19</b> · PAT (NAT Overload) with Port Address Multiplexing</div>
+          <div class="lab-badge"><b>Lab 20</b> · DHCP Server, Exclusion Ranges & DHCP Relay</div>
+          <div class="lab-badge"><b>Lab 21</b> · NTP Server Hierarchy & Syslog Logging Server</div>
+          <div class="lab-badge"><b>Lab 22</b> · Cisco WLC Setup, Lightweight AP & WPA2/WPA3 SSID</div>
+        </div>
+      </div>
+
+      <!-- Group 5 -->
+      <div class="lab-group">
+        <div class="lab-group-title"><i class="fa-solid fa-server"></i> Virtualization & Container Labs</div>
+        <div class="labs-grid">
+          <div class="lab-badge"><b>Lab 23</b> · VMware ESXi Type-1 Hypervisor & vSwitch Setup</div>
+          <div class="lab-badge"><b>Lab 24</b> · VMware Workstation Type-2 Multi-OS Lab</div>
+          <div class="lab-badge"><b>Lab 25</b> · Docker Containerization & Microservice Networking</div>
+        </div>
+      </div>
+
+      <!-- Group 6 -->
+      <div class="lab-group">
+        <div class="lab-group-title"><i class="fa-solid fa-bug"></i> Security, Attack Simulation & Defense Labs</div>
+        <div class="labs-grid">
+          <div class="lab-badge"><b>Lab 26</b> · Smurf ICMP Reflection & Amplification Mitigation</div>
+          <div class="lab-badge"><b>Lab 27</b> · RIPv2 & OSPF MD5 Cryptographic Authentication</div>
+          <div class="lab-badge"><b>Lab 28</b> · Local AAA Authentication & Privilege Levels</div>
+          <div class="lab-badge"><b>Lab 29</b> · Layer-3 Route Injection & Spoof Attack Analysis</div>
+          <div class="lab-badge"><b>Lab 30</b> · Layer-2 CDP Flood & DTP Exploit Mitigation</div>
+          <div class="lab-badge"><b>Lab 31</b> · CAM Table MAC Flooding Attack & Port Security</div>
+          <div class="lab-badge"><b>Lab 32</b> · Site-to-Site IPsec VPN Tunnel with Crypto Maps</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Schedules & Formats -->
+  <section class="section-pad" id="schedules">
+    <div class="sec-kicker"><i class="fa-solid fa-calendar-days"></i> $ crontab -l --batches</div>
+    <h2 class="sec-title">Batch Schedules & Delivery Modes</h2>
+    <p class="sec-subtitle">
+      Flexible timings for working professionals, network administrators, and college students.
+    </p>
+
+    <div class="schedule-grid">
+      <!-- Weekday -->
+      <div class="schedule-card">
+        <div class="schedule-badge">Regular Weekday Batches</div>
+        <h4>Monday to Friday (2 hrs / day)</h4>
+        <ul class="timing-list">
+          <li><span>Early Morning Batch</span> <span>07:30 AM – 09:30 AM</span></li>
+          <li><span>Morning Batch</span> <span>10:00 AM – 12:00 PM</span></li>
+          <li><span>Afternoon Batch</span> <span>02:00 PM – 04:00 PM</span></li>
+          <li><span>Evening Batch</span> <span>07:00 PM – 09:00 PM</span></li>
+          <li><span>Late Night / Fastrack</span> <span>09:30 PM – 11:30 PM</span></li>
+        </ul>
+      </div>
+
+      <!-- Weekend -->
+      <div class="schedule-card">
+        <div class="schedule-badge">Weekend Batches for Working Pros</div>
+        <h4>Saturday & Sunday (4 hrs / day)</h4>
+        <ul class="timing-list">
+          <li><span>Weekend Morning Batch</span> <span>09:00 AM – 01:00 PM</span></li>
+          <li><span>Weekend Afternoon Batch</span> <span>02:00 PM – 06:00 PM</span></li>
+          <li><span>Weekend Evening Batch</span> <span>06:30 PM – 10:30 PM</span></li>
+          <li><span>Sunday Exclusive Batch</span> <span>10:00 AM – 06:00 PM (Full Day)</span></li>
+          <li><span>1-on-1 Dedicated Mentorship</span> <span>Custom Time Slots Available</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section-pad" id="faq">
+    <div class="sec-kicker"><i class="fa-solid fa-circle-question"></i> $ man ccna_faq</div>
+    <h2 class="sec-title">Frequently Asked Questions</h2>
+    <p class="sec-subtitle">Straight answers to common questions about the course, labs, and certification.</p>
+
+    <div class="faq-list">
+      <div class="faq-item open">
+        <div class="faq-q">
+          <span>Is this training live instructor-led or pre-recorded videos?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-a">
+          100% Live Instructor-Led training with real-time interactive troubleshooting and live doubt-solving. We do not sell pre-recorded video packs. You build topologies live with the faculty.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>How do I access hands-on labs if I join online?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-a">
+          You receive 24/7 access to our cloud-hosted lab racks and guided topologies running Cisco Packet Tracer, GNS3, and physical homelab gear over secure ZeroTier VPN tunnels.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>What is the course fee and payment structure?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-a">
+          The full 120-hour CCNA course fee is ₹15,000 (one-time). You can also opt for modular payments: Module 1 (Fundamentals & Switching) for ₹10,500, and Module 2 (Routing, Security & Automation) for ₹5,500.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>Will this course prepare me for real job interviews?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-a">
+          Yes. Beyond passing the 200-301 exam, our curriculum includes real enterprise troubleshooting drills (L2/L3 packet analysis in Wireshark, DHCP snooping attacks, OSPF adjacency failures) so you can answer mechanism-level questions in technical interviews.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <div class="cta-banner">
+    <h2>Ready to Master Enterprise Networking?</h2>
+    <p>Join the next live batch at Root Domain Access. Limited seats per batch to guarantee 1-on-1 lab guidance.</p>
+    <a href="https://wa.me/918451971503?text=Hi%20Samved,%20I%20am%20ready%20to%20enroll%20in%20CCNA." target="_blank" class="btn-primary-large" style="display:inline-block;width:auto;padding:16px 36px;">
+      <i class="fa-brands fa-whatsapp"></i> Enroll Now via WhatsApp / Call
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="brand-text" style="font-size:16px;">ROOT <span>DOMAIN</span> ACCESS</div>
+        <p>Enterprise IT & Cybersecurity Training Academy. Taught through real home-lab infrastructure and production mechanisms.</p>
+        <div style="margin-top:12px;color:var(--gray);font-size:13px;">
+          Direct: <b>+91 8451971503</b> · <b>samvedme@zohomail.com</b>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h5>Courses</h5>
+          <a href="ccna.html">CCNA (200-301)</a>
+          <a href="index.html#courses">RHCSA / RHCE</a>
+          <a href="index.html#courses">AWS Solutions Architect</a>
+          <a href="index.html#courses">Firewall & Security</a>
+          <a href="index.html#courses">ISC2 CC</a>
+        </div>
+        <div>
+          <h5>Navigation</h5>
+          <a href="index.html">Home</a>
+          <a href="#curriculum">Syllabus</a>
+          <a href="#labs">32 Labs</a>
+          <a href="#schedules">Batch Timings</a>
+          <a href="#faq">FAQ</a>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:30px;text-align:center;font-size:11px;color:var(--gray-dim);border-top:1px solid rgba(255,255,255,0.03);padding-top:20px;">
+      © 2026 Root Domain Access. All rights reserved. Cisco® and CCNA® are registered trademarks of Cisco Systems, Inc.
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  // Simple vanilla accordion for FAQ
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      item.classList.toggle('open');
+    });
+  });
+</script>
+
+</body>
+</html>

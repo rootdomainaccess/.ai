@@ -1,0 +1,484 @@
+/* ==========================================================================
+   Root Domain Access — Dark Terminal Cyber Theme
+   Colors: JetBrains Mono / Space Grotesk, #07090e base, #22ffa1 green, #00f0ff cyan
+   ========================================================================== */
+
+:root {
+  --bg: #07090e;
+  --bg-surface: #0c1017;
+  --bg-card: #111722;
+  --bg-card-hover: #161e2c;
+  --card-border: #1a2736;
+  --card-border-hover: #22ffa1;
+  --green: #22ffa1;
+  --green-glow: rgba(34, 255, 161, 0.18);
+  --cyan: #00f0ff;
+  --cyan-glow: rgba(0, 240, 255, 0.18);
+  --amber: #ffb84d;
+  --amber-glow: rgba(255, 184, 77, 0.18);
+  --red: #ff5252;
+  --white: #f3f8fb;
+  --gray: #94a3b8;
+  --gray-dim: #64748b;
+  --grid: rgba(30, 41, 59, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1.6;
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-attachment: fixed;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(0, 240, 255, 0.08), transparent 45%),
+    radial-gradient(circle at 15% 85%, rgba(34, 255, 161, 0.07), transparent 45%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 28px;
+  position: relative;
+  z-index: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--white);
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(34, 255, 161, 0.12);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(7, 9, 14, 0.88);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-box {
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid var(--cyan);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: var(--cyan);
+  background: rgba(0, 240, 255, 0.06);
+  box-shadow: 0 0 12px var(--cyan-glow);
+}
+
+.brand-text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+}
+
+.brand-text span {
+  color: var(--green);
+}
+
+.nav-links {
+  display: flex;
+  gap: 26px;
+  font-size: 13.5px;
+}
+
+.nav-links a {
+  color: var(--gray);
+  text-decoration: none;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--cyan);
+}
+
+.btn-enroll-nav {
+  background: transparent;
+  color: var(--green);
+  border: 1px solid var(--green);
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-enroll-nav:hover {
+  background: var(--green);
+  color: #05100b;
+  box-shadow: 0 0 15px var(--green-glow);
+}
+
+/* ==========================================================================
+   Terminal Window Chrome & Titlebars
+   ========================================================================== */
+.terminal-window {
+  background: var(--bg-card);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.terminal-window:hover {
+  border-color: rgba(34, 255, 161, 0.35);
+}
+
+.titlebar {
+  background: #080c12;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.dot.r { background: #ff5c58; }
+.dot.y { background: #ffbd2e; }
+.dot.g { background: #28c93f; }
+
+.titlebar-file {
+  margin-left: 10px;
+  font-size: 12px;
+  color: var(--gray-dim);
+}
+
+.titlebar-status {
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ==========================================================================
+   Buttons & Tags
+   ========================================================================== */
+.btn-primary {
+  background: var(--green);
+  color: #04150e;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 13px 26px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 20px var(--green-glow);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--cyan);
+  border: 1px solid var(--cyan);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background: rgba(0, 240, 255, 0.08);
+  box-shadow: 0 0 15px var(--cyan-glow);
+}
+
+.btn-ghost {
+  color: var(--cyan);
+  font-size: 13.5px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 240, 255, 0.4);
+  padding-bottom: 2px;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-ghost:hover {
+  color: var(--white);
+  border-color: var(--white);
+}
+
+.badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(34, 255, 161, 0.08);
+  border: 1px solid rgba(34, 255, 161, 0.25);
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-cyan {
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  color: var(--cyan);
+}
+
+/* ==========================================================================
+   Section Layouts
+   ========================================================================== */
+.section-pad {
+  padding: 60px 0;
+}
+
+.sec-kicker {
+  color: var(--cyan);
+  font-size: 13.5px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sec-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.sec-subtitle {
+  color: var(--gray);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 16px;
+  max-width: 720px;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+/* Breadcrumbs */
+.breadcrumb {
+  padding: 24px 0 10px;
+  font-size: 12px;
+  color: var(--gray-dim);
+}
+
+.breadcrumb a {
+  color: var(--gray);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--cyan);
+}
+
+.breadcrumb span {
+  color: var(--cyan);
+  margin: 0 6px;
+}
+
+/* ==========================================================================
+   Interactive FAQ Accordion
+   ========================================================================== */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 900px;
+}
+
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-q {
+  padding: 18px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.faq-q i {
+  color: var(--cyan);
+  transition: transform 0.2s;
+}
+
+.faq-a {
+  padding: 0 20px 18px;
+  font-size: 13.5px;
+  color: var(--gray);
+  line-height: 1.6;
+  display: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  padding-top: 12px;
+}
+
+.faq-item.open .faq-a {
+  display: block;
+}
+
+.faq-item.open .faq-q i {
+  transform: rotate(180deg);
+}
+
+/* ==========================================================================
+   CTA Banners
+   ========================================================================== */
+.cta-banner {
+  background: linear-gradient(135deg, #091a18 0%, #0c1524 100%);
+  border: 1px solid var(--green);
+  box-shadow: 0 0 30px var(--green-glow);
+  border-radius: 12px;
+  padding: 44px;
+  text-align: center;
+  margin: 60px 0 80px;
+}
+
+.cta-banner h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.cta-banner p {
+  color: var(--gray);
+  font-size: 16px;
+  max-width: 650px;
+  margin: 0 auto 28px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+  border-top: 1px solid var(--card-border);
+  padding: 44px 0 60px;
+  font-size: 13px;
+  color: var(--gray-dim);
+  margin-top: 40px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-left p {
+  margin-top: 8px;
+  color: var(--gray);
+  max-width: 360px;
+  line-height: 1.6;
+}
+
+.footer-links {
+  display: flex;
+  gap: 48px;
+}
+
+.footer-links div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-links div h5 {
+  color: var(--white);
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.footer-links a {
+  color: var(--gray);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--cyan);
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .footer-links { flex-direction: column; gap: 24px; }
+  .cta-banner { padding: 30px 20px; }
+}

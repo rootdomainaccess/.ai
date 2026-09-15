@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Firewall & Network Security Mastery | Root Domain Access</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html" class="brand">
+      <div class="logo-box"><i class="fa-solid fa-terminal"></i></div>
+      <div class="brand-text">ROOT <span>DOMAIN</span> ACCESS</div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#courses">All Tracks</a>
+      <a href="#curriculum">Syllabus</a>
+      <a href="#labs">15 Labs</a>
+      <a href="#schedules">Schedules</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a href="#enroll" class="btn-enroll-nav">Enroll in Batch →</a>
+  </nav>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumb">
+    <a href="index.html">Courses</a> <span>/</span> Network Security <span>/</span> Firewall &amp; Enterprise Security
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-grid" style="display:grid;grid-template-columns:1.8fr 1.2fr;gap:40px;">
+      <div>
+        <div class="badge-tag" style="border-color:var(--cyan);color:var(--cyan);">
+          <i class="fa-solid fa-shield-virus"></i> Enterprise Defense &amp; Traffic Filtering
+        </div>
+        <h1 style="font-size:clamp(32px, 4.5vw, 48px);line-height:1.15;margin:16px 0;">
+          Production Firewall Engineering &amp; Threat Defense
+        </h1>
+        <p class="hero-desc">
+          Taught directly from live production enterprise administration. Master stateful inspection, Sophos XGS policy tuning, Netskope Cloud Proxy/CASB architecture, IPsec &amp; SSL VPN tunnels, Layer-7 application control, and SIEM security log analysis.
+        </p>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar" style="display:grid;grid-template-columns:repeat(4, 1fr);gap:16px;background:var(--bg-surface);border:1px solid var(--card-border);border-radius:10px;padding:18px 22px;">
+          <div class="stat-item">
+            <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">Duration</div>
+            <div style="font-size:18px;font-weight:700;color:var(--white);">40 <span style="color:var(--green);font-size:14px;">Hrs</span></div>
+          </div>
+          <div class="stat-item">
+            <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">Hands-on Labs</div>
+            <div style="font-size:18px;font-weight:700;color:var(--white);">15 <span style="color:var(--green);font-size:14px;">Labs</span></div>
+          </div>
+          <div class="stat-item">
+            <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">Appliances</div>
+            <div style="font-size:18px;font-weight:700;color:var(--white);">Sophos / pfSense</div>
+          </div>
+          <div class="stat-item">
+            <div style="font-size:11px;color:var(--gray-dim);text-transform:uppercase;">Format</div>
+            <div style="font-size:18px;font-weight:700;color:var(--white);">Live <span style="color:var(--green);font-size:14px;">Interactive</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Enrollment Card -->
+      <div class="terminal-window" id="enroll">
+        <div class="titlebar">
+          <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+          <div class="titlebar-file">firewall_sec.sh</div>
+        </div>
+        <div style="padding:24px;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:16px;border-bottom:1px solid var(--card-border);margin-bottom:18px;">
+            <div>
+              <div style="font-size:12px;color:var(--gray-dim);text-transform:uppercase;">Course Fee</div>
+              <div style="font-size:30px;font-weight:700;color:var(--green);font-family:'Space Grotesk',sans-serif;">₹8,500 <span style="font-size:13px;color:var(--gray);font-weight:400;">/ One-Time</span></div>
+            </div>
+            <div style="font-size:11px;color:var(--gray-dim);text-align:right;">
+              <div>Includes 24/7 Virtual Firewall Lab Access</div>
+            </div>
+          </div>
+
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:24px;">
+            <li style="font-size:13px;color:var(--gray);display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-check" style="color:var(--cyan);"></i> 40 Hours Live Practical Instruction</li>
+            <li style="font-size:13px;color:var(--gray);display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-check" style="color:var(--cyan);"></i> Sophos XGS &amp; pfSense Dual Appliance Labs</li>
+            <li style="font-size:13px;color:var(--gray);display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-check" style="color:var(--cyan);"></i> Netskope Proxy &amp; CASB Policy Management</li>
+            <li style="font-size:13px;color:var(--gray);display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-check" style="color:var(--cyan);"></i> IPsec &amp; WireGuard Site-to-Site Tunnels</li>
+            <li style="font-size:13px;color:var(--gray);display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-check" style="color:var(--cyan);"></i> SIEM Log Forwarding &amp; Threat Detection</li>
+          </ul>
+
+          <a href="https://wa.me/918451971503?text=Hi%20Samved,%20I%20want%20to%20enroll%20in%20Firewall%20%26%20Network%20Security." target="_blank" class="btn-primary" style="display:block;width:100%;text-align:center;padding:14px;">
+            <i class="fa-brands fa-whatsapp"></i> Reserve Seat in Next Batch
+          </a>
+          <div style="text-align:center;font-size:11px;color:var(--gray-dim);margin-top:10px;">
+            Direct phone/WhatsApp: +91 8451971503 · Mumbai / Online
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complete Syllabus -->
+  <section class="section-pad" id="curriculum">
+    <div class="sec-kicker"><i class="fa-solid fa-terminal"></i> $ cat firewall_modules.json</div>
+    <h2 class="sec-title">Curriculum Blueprint (4 Core Modules)</h2>
+    <p class="sec-subtitle">Hands-on architecture, real packet captures, and live policy deployment.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:24px;">
+      <!-- Module 1 -->
+      <div style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:24px;">
+        <div style="font-size:11px;color:var(--cyan);font-weight:600;letter-spacing:1px;text-transform:uppercase;">Module 1 · Core Architecture</div>
+        <h3 style="font-size:18px;margin:6px 0 12px;">Packet Flow &amp; Stateful Inspection</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--gray);">
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Stateful vs Stateless packet filtering &amp; connection state tables</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Zone-based security models: LAN, WAN, DMZ, VPN, Guest interfaces</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> NAT &amp; Routing on firewalls: Source NAT, Destination NAT, 1:1 NAT, Port Forwarding</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Linux kernel firewalling: Netfilter architecture, `iptables`, `nftables`</li>
+        </ul>
+      </div>
+
+      <!-- Module 2 -->
+      <div style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:24px;">
+        <div style="font-size:11px;color:var(--cyan);font-weight:600;letter-spacing:1px;text-transform:uppercase;">Module 2 · Next-Gen Firewalls</div>
+        <h3 style="font-size:18px;margin:6px 0 12px;">Sophos XGS &amp; UTM Policy Engine</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--gray);">
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Sophos XGS architecture: Dual-processor Xstream architecture (Control vs FastPath)</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Layer-7 Application Control, deep packet inspection (DPI) &amp; traffic shaping</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Web filtering, SSL/TLS decryption inspection &amp; certificate distribution</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Intrusion Prevention System (IPS) signature tuning &amp; false-positive handling</li>
+        </ul>
+      </div>
+
+      <!-- Module 3 -->
+      <div style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:24px;">
+        <div style="font-size:11px;color:var(--cyan);font-weight:600;letter-spacing:1px;text-transform:uppercase;">Module 3 · Secure Remote Access</div>
+        <h3 style="font-size:18px;margin:6px 0 12px;">VPNs &amp; Zero Trust Remote Access</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--gray);">
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Site-to-Site IPsec VPN: IKEv1/IKEv2, Phase 1 / Phase 2 crypto proposals &amp; tunnel debug</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> SSL VPN Remote Access with MFA &amp; client certificate authentication</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Modern WireGuard mesh VPN tunnels &amp; ZeroTier enterprise overlay networks</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Redundant dual-WAN failover &amp; SD-WAN path selection policies</li>
+        </ul>
+      </div>
+
+      <!-- Module 4 -->
+      <div style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:10px;padding:24px;">
+        <div style="font-size:11px;color:var(--cyan);font-weight:600;letter-spacing:1px;text-transform:uppercase;">Module 4 · Cloud Proxy &amp; CASB</div>
+        <h3 style="font-size:18px;margin:6px 0 12px;">Netskope CASB &amp; SIEM Integration</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--gray);">
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Netskope Cloud Security: Steering client configuration, proxy pac files &amp; Cloud Apps</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> CASB policy enforcement: blocking unsanctioned SaaS, DLP rules &amp; data classification</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> MDM integration with Scalefusion: device compliance &amp; endpoint posture check</li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--green);">▹</span> Syslog forwarding to Wazuh SIEM / Splunk for live threat hunting &amp; alert triage</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 15 Hands-on Labs -->
+  <section class="section-pad" id="labs">
+    <div class="sec-kicker"><i class="fa-solid fa-microchip"></i> $ sudo firewall-lab-ctl --status</div>
+    <h2 class="sec-title">15 Hands-on Enterprise Firewall Labs</h2>
+    <p class="sec-subtitle">Hands-on exercises configuring real Sophos, pfSense, and Linux firewall appliances.</p>
+
+    <div style="background:var(--bg-surface);border:1px solid var(--card-border);border-radius:12px;padding:28px;">
+      <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:14px;">
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 01</b> · Initial Appliance Boot, Interface Zoning &amp; Management Subnet</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 02</b> · DNAT Port Forwarding &amp; DMZ Web Server Isolation</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 03</b> · Stateful Packet Filter &amp; Netfilter `iptables` Custom Chains</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 04</b> · Sophos XGS Layer-7 Application Policy &amp; Torrent Blocking</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 05</b> · SSL/TLS Deep Packet Inspection &amp; CA Certificate Rollout</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 06</b> · Web Content Filtering &amp; Categorization Bypass Protection</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 07</b> · Snort / Suricata IPS Rule Deployment &amp; Attack Mitigation</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 08</b> · Site-to-Site IPsec VPN between Sophos and pfSense</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 09</b> · Remote Access OpenVPN / SSL VPN with Entra ID SAML Auth</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 10</b> · Multi-WAN Load Balancing &amp; Automated Failover SLA Policy</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 11</b> · ZeroTier Secure VPN Mesh Topology for Remote Homelabs</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 12</b> · Netskope Steering Policy &amp; Shadow IT SaaS Discovery</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 13</b> · Cloud DLP Policy: Blocking Credit Cards &amp; API Key Uploads</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 14</b> · Firewall Log Export via Syslog to Wazuh SIEM</div>
+        <div class="lab-badge" style="background:var(--bg-card);border:1px solid var(--card-border);border-radius:6px;padding:12px;font-size:12.5px;color:var(--gray);"><b style="color:var(--cyan);">Lab 15</b> · Live Incident Response: Diagnosing Port Scans &amp; DoS Floods</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <div class="cta-banner">
+    <h2>Master Enterprise Security Policies</h2>
+    <p>Join the next live batch at Root Domain Access. Learn the exact stack deployed in modern corporate networks.</p>
+    <a href="https://wa.me/918451971503?text=Hi%20Samved,%20I%20am%20ready%20to%20enroll%20in%20Firewall%20Security." target="_blank" class="btn-primary" style="padding:16px 36px;font-size:16px;">
+      <i class="fa-brands fa-whatsapp"></i> Enroll Now via WhatsApp / Call
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="brand-text" style="font-size:16px;">ROOT <span>DOMAIN</span> ACCESS</div>
+        <p>Enterprise IT &amp; Cybersecurity Training Academy. Taught through real home-lab infrastructure and production mechanisms.</p>
+        <div style="margin-top:12px;color:var(--gray);font-size:13px;">
+          Direct: <b>+91 8451971503</b> · <b>samvedme@zohomail.com</b>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h5>Courses</h5>
+          <a href="ccna.html">CCNA (200-301)</a>
+          <a href="rhcsa-rhce.html">RHCSA / RHCE</a>
+          <a href="aws-solutions-architect.html">AWS Solutions Architect</a>
+          <a href="firewall-security.html">Firewall &amp; Security</a>
+          <a href="isc2-cc.html">ISC2 CC</a>
+        </div>
+        <div>
+          <h5>Navigation</h5>
+          <a href="index.html">Home</a>
+          <a href="#curriculum">Syllabus</a>
+          <a href="#labs">15 Labs</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:30px;text-align:center;font-size:11px;color:var(--gray-dim);border-top:1px solid rgba(255,255,255,0.03);padding-top:20px;">
+      © 2026 Root Domain Access. All rights reserved. Sophos® is a registered trademark of Sophos Ltd.
+    </div>
+  </footer>
+
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
